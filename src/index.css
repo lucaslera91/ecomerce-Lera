@@ -1,6 +1,4 @@
-*{
-  border:3px;
-}
+
 body {
   margin: 0;
   
@@ -11,14 +9,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 
-  background-color: rgb(221, 187, 17, 0.3) ;
+
 
   
 }
-#hamburgerButton:focus :active {
-  outline: none;
- outline-style: none;
-}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

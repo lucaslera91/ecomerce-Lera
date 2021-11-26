@@ -1,13 +1,13 @@
-//import logo from './logo.svg';
 import './App.css';
-
-import navBar from './componentes/navbar'
-import sideNavBar from './componentes/navbar';
-
+import NavBar from '../src/componentes/navbar'
 
 function App() {
-  const header = sideNavBar()
-  return header
+  
+  return (
+    <div className="App">
+      <NavBar></NavBar>
+    </div>
+  );
 }
 
 
