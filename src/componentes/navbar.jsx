@@ -1,28 +1,23 @@
+import LiMenuTag from "./LiMenuTag"
 
-
-
-export default function navBar() {
-
-    return (
-        <nav className="navbar fixed-top navbar-dark bg-dark">
-  
-            <div className="pos-f-t">
-                <div className="collapse" id="navbarToggleExternalContent">
-                    <div className="bg-dark p-4">
-                        <h5 className="text-white h4">Products</h5>
-                        <span className="text-muted">Meet Us</span>
-                    </div>
-                </div>
-                <nav className="navbar navbar-dark bg-dark d-flex f-direction-row" >
-                    <button  className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span id="hamburgerButton" className="navbar-toggler-icon"></span>
-                    </button>
-                </nav>
+const NavBar = () => {
+    
+    return (<nav className="navbar navbar-dark navbar-1 bg-dark">
+                <a className="navbar-brand" href="#">CompuShop</a>
                 
-            </div>
-        </nav>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+                    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
+                
+                <div className="collapse navbar-collapse" id="navbarSupportedContent15">
+                    <ul className="navbar-nav mr-auto">
+                        <LiMenuTag referencia="#" tituloDeMenu="Home" active="active"></LiMenuTag>
+                        <LiMenuTag referencia="#" tituloDeMenu="Products"></LiMenuTag>
+                        <LiMenuTag referencia="#" tituloDeMenu="Contact Us"></LiMenuTag>
+                    </ul>
+
+                </div>
+            </nav>
     );
 }
 
-
-
+export default NavBar
