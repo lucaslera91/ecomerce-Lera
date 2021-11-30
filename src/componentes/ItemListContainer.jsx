@@ -3,7 +3,7 @@ import { Children } from 'react'
 
 export default function ItemListContainer({greeting}) {
     
-    let containerHeight = "91vh"
+    let containerHeight = "100vh"
    
     return (
         
