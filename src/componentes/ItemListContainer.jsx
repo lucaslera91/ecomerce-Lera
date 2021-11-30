@@ -7,7 +7,7 @@ export default function ItemListContainer({greeting}) {
    
     return (
         
-        <div className="border border-dark bg-light d-flex align-items-center" style={{height:  containerHeight}}>
+        <div className="border border-dark bg-light d-flex align-items-center justify-content-center" style={{height:  containerHeight}}>
             
             <h2>{greeting}</h2>
            
