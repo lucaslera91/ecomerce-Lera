@@ -1,33 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import react,{ useState } from "react";
-
+import ButtonCounter from './ButtonCounter';
 
 
 function ItemCount({stock, start}) {
     
-    const [contador, setContador] = useState(start);
-
-    const onAdd = () => {
-        if(contador < stock){
-            setContador(contador + 1)
-        }
-    }
-    const less = () => {
-        if(contador > start){
-            setContador(contador - 1)
-        }
-    }
+    
     return (
-        <div className="container-fluid">
+        <div className="container-fluid border border-1 w-25 padding py-1" >
             <h4>Stock: {stock}</h4>
-            <div className="container-fluid d-flex justify-content-between w-25">
-                <button className="bg-light border-0" onClick={onAdd}><i className="fas fa-plus"></i></button>
-                <h3>{contador}</h3>
-                <button className="bg-light border-0" onClick={less}><i className="fas fa-minus"></i></button>
-            </div>
+                <ButtonCounter stock={stock} start={start}></ButtonCounter>
             <div>
-                <button className="bg-light w-25 border border-primary rounded text-primary">Add to Cart</button>
+                <button className="bg-light w-100 border border-primary rounded text-primary">Add to Cart</button>
             </div>
         </div>
     )
