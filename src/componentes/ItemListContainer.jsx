@@ -7,43 +7,68 @@ import ItemList from './ItemList';
 
 export default function ItemListContainer({greeting, Children}) {
     
-    let containerHeight = "100vh"
+    let containerHeight = "auto"
 
     let info = [{
         id: 1,
         title: "Samsung Modelo 1",
         descripcion: "Laptop muy elegante y gran capacidad de procesar.",
         price: 40000,
-        picture: 'https://img.global.news.samsung.com/mx/wp-content/uploads/2019/01/Notebook-9-Pro-3.jpg'
-
+        picture: 'https://img.global.news.samsung.com/mx/wp-content/uploads/2019/01/Notebook-9-Pro-3.jpg',
+        stock: 5
     },{
         id: 2,
         title: "HP Modelo 1",
         descripcion: "Mucha bateria y durabilidad. Muy robusta",
         price: 60000,
-        picture: 'https://247tecno.com/wp-content/uploads/2018/05/laptop-1024x658.png'
+        picture: 'https://247tecno.com/wp-content/uploads/2018/05/laptop-1024x658.png',
+        stock: 8
 
     },{
         id: 3,
         title: "Windows Modelo 1",
         descripcion: "Facil de transportar",
         price: 80000,
-        picture: 'https://cdn.aarp.net/content/dam/aarp/home-and-family/personal-technology/2020/08/1140-surface-pro-2-esp.jpg'
+        picture: 'https://cdn.aarp.net/content/dam/aarp/home-and-family/personal-technology/2020/08/1140-surface-pro-2-esp.jpg',
+        stock: 2
 
     },{
         id: 4,
         title: "Mac Modelo 1",
         descripcion: "Producto muy duradero y gran capacidad de reventa.",
         price: 100000,
-        picture: 'https://cdnnmundo1.img.sputniknews.com/img/108360/70/1083607049_359:0:1618:1259_1920x0_80_0_0_807da4c2a4c94bab1920cb4cc1f974c1.jpg'
+        picture: 'https://cdnnmundo1.img.sputniknews.com/img/108360/70/1083607049_359:0:1618:1259_1920x0_80_0_0_807da4c2a4c94bab1920cb4cc1f974c1.jpg',
+        stock: 4
 
     },{
         id: 5,
         title: "Windows Vintage1",
         descripcion: "Desktop ligeramente usada.",
         price: 25000,
-        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg'
+        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
+        stock: 1
 
+    },{
+        id: 6,
+        title: "Windows Vintage1",
+        descripcion: "Desktop ligeramente usada.",
+        price: 25000,
+        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
+        stock: 1
+    },{
+        id: 7,
+        title: "Windows Vintage1",
+        descripcion: "Desktop ligeramente usada.",
+        price: 25000,
+        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
+        stock: 1
+    },{
+        id: 8,
+        title: "Windows Vintage1",
+        descripcion: "Desktop ligeramente usada.",
+        price: 25000,
+        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
+        stock: 1
     }
     ]
     const [items, setItems] = useState('none');
@@ -74,13 +99,13 @@ export default function ItemListContainer({greeting, Children}) {
 
     return (
         
-        <div className="border border-dark bg-light d-flx align-content-center justify-content-center" style={{height:  containerHeight}}>
-            
+        <div className="bg-light d-flex flex-column align-content-center justify-content-center" style={{height:  containerHeight}}>
             <h2>{greeting}</h2>
+
+            <div className="bg-light d-flex align-content-center justify-content-center flex-wrap">
             {Children}
-            <ItemCount stock={5} start={1} />
-            {items[0].title}
             <ItemList items={items}></ItemList>
+            </div>
             
         </div>
     )
