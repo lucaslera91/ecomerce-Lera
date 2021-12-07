@@ -2,6 +2,7 @@ import { Children } from 'react'
 import React, { useState,useEffect} from "react";
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
+import axios from 'axios';
 
 
 
@@ -90,9 +91,24 @@ export default function ItemListContainer({greeting, Children}) {
             console.log('Error en lista')
         }
     }
+    
+    fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+    .then((res) => {
+        let rawData = res.json()
+        return rawData
+    }).then((rawData)=>{
+        console.log(rawData)
+    })
+
+
 
     useEffect(() => {
         getItems();
+        axios.get('https://pokeapi.co/api/v2/pokemon/pikachu').then((res) => {
+            console.log('poke')
+            console.log(res)
+        })
+
     }, [])
 
     

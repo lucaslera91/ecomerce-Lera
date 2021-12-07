@@ -17,9 +17,9 @@ function ButtonCounter({start, stock}) {
     }
     return (
         <div className="container-fluid d-flex justify-content-between w-100">
-            <button className="bg-light border-0 w-100" onClick={onAdd}><i className="fas fa-plus"></i></button>
+            <button className="bg-transparent border-0 w-100" onClick={onAdd}><i className="fas fa-plus"></i></button>
             <h3>{contador}</h3>
-            <button className="bg-light border-0 w-100" onClick={less}><i className="fas fa-minus"></i></button>
+            <button className="bg-transparent border-0 w-100" onClick={less}><i className="fas fa-minus"></i></button>
         </div>);
       
 }
