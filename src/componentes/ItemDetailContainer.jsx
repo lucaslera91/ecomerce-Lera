@@ -1,17 +1,10 @@
-import { Children } from 'react'
-import React, { useState,useEffect} from "react";
-import ItemCount from './ItemCount';
-import ItemList from './ItemList';
-import axios from 'axios';
-import ItemDetailContainer from './ItemDetailContainer'
+import React, {useEffect, useState} from 'react'
+import ItemDetail from './ItemDetail'
 
-
-export default function ItemListContainer({greeting, Children, fn, id}) {
-    
-    let containerHeight = "auto"
-
+export default function ItemDetailContainer({id}) {
+   // alert(id)
     let info = [{
-        id: 1, 
+        id: 1,
         title: "Samsung Modelo 1",
         descripcion: "Laptop muy elegante y gran capacidad de procesar.",
         price: 40000,
@@ -72,7 +65,8 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         stock: 1
     }
     ]
-    const [items, setItems] = useState('none');
+    //console.log(id)
+    const [itemInfo, setItemInfo] = useState('None')
 
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -80,49 +74,36 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         }, 2000);
     })
 
-    async function getItems(){
+    async function getItemInfo(){
+        //alert('yay')
         try{
             let data = await promise;
-            //console.log(data);
-            setItems(data);
-           // console.log(items);
+            //console.log(data)
+            const searched = data.filter((element) => {
+                return element.id == id;
+            })
+            //alert(searched[0])
+            setItemInfo(searched[0])
+            
         } catch(e){
             console.log(e)
             console.log('Error en lista')
         }
     }
-    
-    // fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-    // .then((res) => {
-    //     let rawData = res.json()
-    //     return rawData
-    // }).then((rawData)=>{
-    //     console.log(rawData)
-    // })
-
-
 
     useEffect(() => {
-        getItems();
-        axios.get('https://pokeapi.co/api/v2/pokemon/pikachu').then((res) => {
-            console.log('poke')
-            console.log(res)
-        })
+        getItemInfo();
 
-    }, [])
+    }, [id])
 
     
 
-    return (
+    if((itemInfo != undefined)){
         
-        <div className="bg-light d-flex flex-column align-content-center justify-content-center" style={{height:  containerHeight}}>
-            <h2>{greeting}</h2>
-
-            <div className="bg-light d-flex align-content-center justify-content-center flex-wrap">
-            {Children}
-            <ItemList items={items} fn={fn}></ItemList>
-            </div>
-            <ItemDetailContainer id={id} ></ItemDetailContainer>
-        </div>
-    )
+        //alert('should be ok ' + id )
+        return <ItemDetail item={itemInfo}></ItemDetail>;
+    }else{
+        //alert({id})
+        return <h3>Select Item...</h3>
+    }
 }
