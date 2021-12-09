@@ -5,7 +5,7 @@ const NavBar = () => {
 
     return (<nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">
         
-            <div className="col-sm-10 px-3 d-flex justify-content-start"><a className="navbar-brand" href="#">CompuShop</a></div>
+            <div className="col-sm-10 px-3 d-flex justify-content-start"><Link className='text-decoration-none' to='/'><a className="navbar-brand">CompuShop</a></Link></div>
 
             <div className="col-sm-1 p-1"><Link to='/cart'><CartWidget className="" color="light" /></Link></div>
 
@@ -19,16 +19,12 @@ const NavBar = () => {
         <div className="collapse navbar-collapse " id="navbarSupportedContent15" >
 
             <ul className="navbar-nav">
-                <Link to="/">
-                    <LiMenuTag referencia="#" tituloDeMenu="Home" active="active"></LiMenuTag>
+                <Link className='text-decoration-none'to="/category/laptop">
+                    <LiMenuTag referencia="#" tituloDeMenu="Laptop" active="active"></LiMenuTag>
                 </Link>
 
-                <NavLink to="/products">
-                    <LiMenuTag referencia="#" tituloDeMenu="Productos"></LiMenuTag>
-                </NavLink>
-
-                <NavLink to="/">
-                    <LiMenuTag referencia="#" tituloDeMenu="Contact Us"></LiMenuTag>
+                <NavLink className='text-decoration-none' to="/category/desktop">
+                    <LiMenuTag referencia="#" tituloDeMenu="Desktop"></LiMenuTag>
                 </NavLink>
             </ul>
 

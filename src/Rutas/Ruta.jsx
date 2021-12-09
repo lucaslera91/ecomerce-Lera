@@ -4,7 +4,7 @@ import Cart from '../views/Cart'
 import Detail from '../views/Detail'
 import Error from '../views/Error'
 import Home from '../views/Home'
-
+import Category from '../views/Category'
 export default function Ruta() {
     return (
         <div>
@@ -13,6 +13,7 @@ export default function Ruta() {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/cart' element={<Cart/>}/>
                     <Route path='/detail/:idElement' element={<Detail/>}/>
+                    <Route path='/category/:idCategory' element={<Category/>}/>
                     <Route path='*' element={<Error/>}/>
                 </Routes>
             </BrowserRouter>

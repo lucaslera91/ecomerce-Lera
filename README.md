@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Por ahi me falta experiencia en que debe decir el archivo Read Me.
+
+Explico la pagina. 
+
+CompuShop es el Brand -> al cual clickeas el nombre y es el 'Home'
+
+El Menu se abre y se puede elegir la categoria laptop o desktop
+
+Si elegis mas detalles se abre el detalle del producto

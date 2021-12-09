@@ -5,11 +5,7 @@ import { Link, NavLink} from "react-router-dom";
 
 
 
-function Item({item, fn}) {
-  
-    const testing2 = () =>{
-        fn(item.id)
-    }
+function Item({item, fn, text}) {
    
 
     return (
@@ -30,7 +26,7 @@ function Item({item, fn}) {
                 </Link>
             </div>
             <div>
-                <ItemCount stock={item.stock} start={1}></ItemCount>
+                <ItemCount text={text} stock={item.stock} start={1}></ItemCount>
             </div>
             <div>
                Stock: {item.stock}

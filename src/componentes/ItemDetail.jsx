@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import ItemCount from './ItemCount'
 
-export default function ItemDetail({ item }) {
+export default function ItemDetail({ item, text }) {
     console.log(item)
     const [bigImg, setImg] = useState()
     
@@ -38,7 +38,7 @@ export default function ItemDetail({ item }) {
                         </div>
                         <div className='w-100 d-flex justify-content-center flex-column'>
                             <h3>Stock: {item.stock}</h3>
-                            <ItemCount stock={item.stock} start={1}></ItemCount>
+                            <ItemCount text={text} stock={item.stock} start={1}></ItemCount>
                         </div>
                     </div>
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail'
-import { BrowserRouter, Route,useParams } from "react-router-dom";
-export default function ItemDetailContainer() {
+import { BrowserRouter, Route, useParams } from "react-router-dom";
+export default function ItemDetailContainer({text}) {
    // alert(id)
 //const params = useParams()
 //console.log(params)
@@ -137,7 +137,7 @@ let info = [{
     if((itemInfo != undefined)){
         
         //alert('should be ok ' + id )
-        return <ItemDetail item={itemInfo}></ItemDetail>;
+        return <ItemDetail text={text} item={itemInfo}></ItemDetail>;
     }else{
         //alert({id})
         return <h3>Select Item...</h3>

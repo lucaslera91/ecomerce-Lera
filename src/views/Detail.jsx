@@ -7,7 +7,7 @@ export default function Detail({}) {
         <div>
            <NavBar/>
            <div className='d-flex position-relative top-75'>
-           <ItemDetailContainer></ItemDetailContainer>
+           <ItemDetailContainer text={'light'}></ItemDetailContainer>
            </div>
            
         </div>
