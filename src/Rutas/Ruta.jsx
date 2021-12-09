@@ -4,7 +4,6 @@ import Cart from '../views/Cart'
 import Detail from '../views/Detail'
 import Error from '../views/Error'
 import Home from '../views/Home'
-import Products from '../views/Products'
 
 export default function Ruta() {
     return (

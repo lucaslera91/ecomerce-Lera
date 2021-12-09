@@ -5,8 +5,6 @@ export default function Cart() {
     return (
         <div>
            <NavBar/>
-
-            Soy Cart
         </div>
     )
 }
