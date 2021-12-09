@@ -1,12 +1,13 @@
 import LiMenuTag from "./LiMenuTag"
 import CartWidget from "./CartWidget";
+import { Link, NavLink} from "react-router-dom";
 const NavBar = () => {
 
     return (<nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">
         
             <div className="col-sm-10 px-3 d-flex justify-content-start"><a className="navbar-brand" href="#">CompuShop</a></div>
 
-            <div className="col-sm-1 p-1"><CartWidget className="" color="light" /></div>
+            <div className="col-sm-1 p-1"><Link to='/cart'><CartWidget className="" color="light" /></Link></div>
 
             <div className="col-sm-1 ">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
@@ -18,9 +19,17 @@ const NavBar = () => {
         <div className="collapse navbar-collapse " id="navbarSupportedContent15" >
 
             <ul className="navbar-nav">
-                <LiMenuTag referencia="#" tituloDeMenu="Home" active="active"></LiMenuTag>
-                <LiMenuTag referencia="#" tituloDeMenu="Products"></LiMenuTag>
-                <LiMenuTag referencia="#" tituloDeMenu="Contact Us"></LiMenuTag>
+                <Link to="/">
+                    <LiMenuTag referencia="#" tituloDeMenu="Home" active="active"></LiMenuTag>
+                </Link>
+
+                <NavLink to="/products">
+                    <LiMenuTag referencia="#" tituloDeMenu="Productos"></LiMenuTag>
+                </NavLink>
+
+                <NavLink to="/">
+                    <LiMenuTag referencia="#" tituloDeMenu="Contact Us"></LiMenuTag>
+                </NavLink>
             </ul>
 
         </div>

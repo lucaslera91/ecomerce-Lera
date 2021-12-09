@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import ButtonCounter from './ButtonCounter'
 import ItemCount from './ItemCount'
+import { Link, NavLink} from "react-router-dom";
+
 
 
 function Item({item, fn}) {
@@ -11,7 +13,7 @@ function Item({item, fn}) {
    
 
     return (
-        <div className='col-4 m-2' style={{width: 200}}>
+        <div className='col-4 m-2 text-dark' style={{width: 200}}>
             <div className="container-fluid w-100 border border-dark p-1 rounded" style={{backgroundColor: '#DCD8D8'}}>
             <div className='w-100 py-1'>
                 <h3 clasName='d-flex justify-content-center align-items-center' style={{height: 60}}>{item.title}</h3>
@@ -23,7 +25,9 @@ function Item({item, fn}) {
                 <h5 className="d-flex justify-content-center align-items-center text-secondary small" style={{height: 50}}>{item.descripcion}</h5>
             </div> */}
             <div>
-                <button className="bg-light w-100 border border-secondary my-1 rounded text-secondary" onClick={testing2}>Ver mas detalles!</button>
+                <Link to={`/detail/${item.id}`}>
+                <button className="bg-light w-100 border border-secondary my-1 rounded text-secondary" >Ver mas detalles!</button>
+                </Link>
             </div>
             <div>
                 <ItemCount stock={item.stock} start={1}></ItemCount>

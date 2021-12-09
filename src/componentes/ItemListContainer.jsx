@@ -16,6 +16,7 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         descripcion: "Laptop muy elegante y gran capacidad de procesar.",
         price: 40000,
         picture: 'https://img.global.news.samsung.com/mx/wp-content/uploads/2019/01/Notebook-9-Pro-3.jpg',
+        type: 'Laptop',
         stock: 5
     },{
         id: 2,
@@ -23,7 +24,8 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         descripcion: "Mucha bateria y durabilidad. Muy robusta",
         price: 60000,
         picture: 'https://247tecno.com/wp-content/uploads/2018/05/laptop-1024x658.png',
-        stock: 8
+        stock: 8,
+        type: 'Laptop'
 
     },{
         id: 3,
@@ -31,7 +33,8 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         descripcion: "Facil de transportar",
         price: 80000,
         picture: 'https://cdn.aarp.net/content/dam/aarp/home-and-family/personal-technology/2020/08/1140-surface-pro-2-esp.jpg',
-        stock: 2
+        stock: 2,
+        type: 'Laptop'
 
     },{
         id: 4,
@@ -39,7 +42,8 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         descripcion: "Producto muy duradero y gran capacidad de reventa.",
         price: 100000,
         picture: 'https://cdnnmundo1.img.sputniknews.com/img/108360/70/1083607049_359:0:1618:1259_1920x0_80_0_0_807da4c2a4c94bab1920cb4cc1f974c1.jpg',
-        stock: 4
+        stock: 4,
+        type: 'Laptop'
 
     },{
         id: 5,
@@ -47,29 +51,33 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         descripcion: "Desktop ligeramente usada.",
         price: 25000,
         picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
-        stock: 1
+        stock: 8,
+        type: 'Laptop'
 
     },{
         id: 6,
         title: "Windows Vintage1",
         descripcion: "Desktop ligeramente usada.",
         price: 25000,
-        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
-        stock: 1
+        picture: 'https://media.istockphoto.com/photos/desktop-pc-picture-id482895394?s=612x612',
+        stock: 7,
+        type: 'Desktop'
     },{
         id: 7,
         title: "Windows Vintage1",
         descripcion: "Desktop ligeramente usada.",
         price: 25000,
-        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
-        stock: 1
+        picture: 'https://5.imimg.com/data5/ZV/EC/DH/SELLER-3866941/desktop-computer-500x500.jpg',
+        stock: 3,
+        type: 'Desktop'
     },{
         id: 8,
         title: "Windows Vintage1",
         descripcion: "Desktop ligeramente usada.",
         price: 25000,
-        picture: 'https://cdn.dl.uy//media/640x370/113/113698.jpg',
-        stock: 1
+        picture: 'https://www.apple.com/v/imac/n/images/overview/imac27__evbw33241ouq_large.jpg',
+        stock: 5,
+        type: 'Desktop'
     }
     ]
     const [items, setItems] = useState('none');
@@ -115,14 +123,14 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
 
     return (
         
-        <div className="bg-light d-flex flex-column align-content-center justify-content-center" style={{height:  containerHeight}}>
+        <div className="bg-transparent text-light d-flex flex-column align-content-center justify-content-center" style={{height:  containerHeight}}>
             <h2>{greeting}</h2>
 
-            <div className="bg-light d-flex align-content-center justify-content-center flex-wrap">
+            <div className="bg-transparent d-flex align-content-center justify-content-center flex-wrap">
             {Children}
             <ItemList items={items} fn={fn}></ItemList>
             </div>
-            <ItemDetailContainer id={id} ></ItemDetailContainer>
+            
         </div>
     )
 }
