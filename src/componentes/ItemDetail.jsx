@@ -5,13 +5,6 @@ export default function ItemDetail({ item, text }) {
     console.log(item)
     const [bigImg, setImg] = useState()
     
-    
-
-    // useEffect(() => {
-    //     setImg();
-
-    // }, [bigImg])
-
     return (
         <div className='w-100 d-flex justify-content-center text-light' style={{ minHeight: '100vh' }}>
             <div className='container-fluid border-secondary rounded w-100 m-2 h-100vh'>
