@@ -1,13 +1,16 @@
 import LiMenuTag from "./LiMenuTag"
 import CartWidget from "./CartWidget";
 import { Link, NavLink} from "react-router-dom";
+import { CartConsumer } from '../context/CartProvider'
+
 const NavBar = () => {
+    const {cart} = CartConsumer();
 
     return (<nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">
         
             <div className="col-sm-10 px-3 d-flex justify-content-start"><Link className='text-decoration-none' to='/'><a className="navbar-brand">CompuShop</a></Link></div>
 
-            <div className="col-sm-1 p-1"><Link to='/cart'><CartWidget className="" color="light" /></Link></div>
+            <div className="col-sm-1 p-1"><Link className='d-flex text-decoration-none text-light' to='/cart'><CartWidget className="text-decoration-none" color="light" />{cart.length}</Link></div>
 
             <div className="col-sm-1 ">
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
