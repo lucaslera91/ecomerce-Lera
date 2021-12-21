@@ -31,7 +31,7 @@ export default function ItemDetail({ item, text }) {
                         </div>
                         <div className='w-100 d-flex justify-content-center flex-column'>
                             <h3>Stock: {item.stock}</h3>
-                            <ItemCount text={text} stock={item.stock} start={1}></ItemCount>
+                            <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
                         </div>
                     </div>
 

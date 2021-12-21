@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ButtonCounter from './ButtonCounter'
 import ItemCount from './ItemCount'
 import { Link, NavLink} from "react-router-dom";
+import BtnAddToCart from './BtnAddToCart';
 
 
 
@@ -26,7 +27,7 @@ function Item({item, fn, text}) {
                 </Link>
             </div>
             <div>
-                <ItemCount text={text} stock={item.stock} start={1}></ItemCount>
+                <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
             </div>
             <div>
                Stock: {item.stock}

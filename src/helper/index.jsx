@@ -1,3 +1,4 @@
+import Item from "../componentes/Item"
 
 export function validationIncludes(value, validacion){
     //console.log(validacion)
@@ -5,8 +6,10 @@ export function validationIncludes(value, validacion){
     return  validacion.some((vocales) => vocales.toLowerCase()=== value.toLowerCase())
 }
 
-export function eliminarComponente(componente){
-    
+export function validateObj(cart, item, parameter){
+    //alert(item[parameter])
+    //alert(cart[parameter])
+    return cart.some((product) => product[parameter] === item[parameter])
 }
 
 
