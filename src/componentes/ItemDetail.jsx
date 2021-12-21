@@ -22,6 +22,9 @@ export default function ItemDetail({ item, text }) {
 
                     <div className='col-2 d-flex justify-content-center align-items-center flex-column'>
                         <div>
+                            <h3>{item.title}</h3>
+                        </div>
+                        <div>
                             <div className='py-3'>
                                 {item.descripcion}
                             </div>
