@@ -1,18 +1,36 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import CartItem from './CartItem'
 import { CartConsumer } from '../context/CartProvider'
-function CartItemList() {
+
+function CartItemList({items}) {
     //get value from cart State
     //show items and add total
-    const {cart} = CartConsumer();
-    console.log(cart)
-    cart.forEach(element => {
-    console.log(element)
-       return (<h1>Hi</h1>)
-    });
+    const {cart, setCart} = CartConsumer();
+    const aux = []
 
-    if(Array.isArray(cart) && cart.length > 0){
-        return cart.map((element) => <CartItem item={element} count={cart.indexOf(element)} key={element.id}></CartItem>);
+   function handleDelete(itemId){
+    setCart([])
+    const aux = items.findIndex(element => element.id == itemId)
+        const remove = items.splice(aux,1)
+       
+         setTimeout(() => {
+            setCart(items) 
+         }, 1);
+    
+
+}
+useEffect(() => {
+    console.log('change')
+}, [cart])
+    
+    if(Array.isArray(items) && items.length > 0){
+        return items.map((element) => 
+                 <div className='border-bottom d-flex justify-content-center align-items-center'>
+                     <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
+                     <div className='d-flex'>
+                         <button className='bg-danger w-100 border border-dark rounded p-0' onClick={()=>handleDelete( element.id)}>Delete</button> 
+                     </div>
+                 </div>);
     }else{
         return (
                 <div>
@@ -20,8 +38,14 @@ function CartItemList() {
                     <a className='text-decoration-none text-light' href="../"><button className='bg-light w-25 border border-primary rounded text-primary my-1'>Go to Home!</button></a>
                 </div>)
 }
-}
+  
+//    
+    
 
+ 
+}
+//handleDelete(items.indexOf(element)
+//this.delete.bind(this)
 export default CartItemList
 {/* <div>
                     <CartItem item={element} key={element.id}></CartItem>

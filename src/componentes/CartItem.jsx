@@ -1,20 +1,23 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import DeleteItem from './DeleteItem'
+import { CartConsumer } from '../context/CartProvider'
 
 function CartItem({item, count}) {
+
    const {title, price, cuantity, picture} = item
    const subtotal = price * cuantity
+
+
     return (
-        <div className='border-bottom'>
-            <h1>Item {count + 1}: {title}</h1>  
-            <div className='d-flex justify-content-center'>
-                <h1><b>Price:</b> ${price} - </h1>
-                <h1><b>Cuantity:</b> {cuantity}</h1>
+        <div className='d-flex align-items-center justify-content-center' style={{height: '100px'}}>
+            <h9>{title}</h9>  
+            <div className='d-flex flex-column justify-content-start p-1'>
+                <h9>${price}</h9>
+                <h9><b>#</b> {cuantity}</h9>
             </div>
-            <h1><b>Subtotal:</b> {subtotal}</h1>
-            <img className='img-fluid border border-2 border-secondary rounded my-2' src={picture} alt="Product Image"/>
-            <div>
-                <ItemCount text='light' stock={item.stock} start={1} item={item}></ItemCount>
+            <h9><b>Subtotal:</b> {subtotal}</h9>
+            <div className="container">
+                <img style={{contain: 'contain'}} className='col-md-4 px-0 img-fluid rounded' src={picture} alt="Product Image"/>
             </div>
         </div>
     )
