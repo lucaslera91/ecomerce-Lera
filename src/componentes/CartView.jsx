@@ -8,12 +8,11 @@ function CartView() {
     const {cart, setCart} = CartConsumer();
     useEffect(() => {
       setCart(cart)
-      //alert('deleted, this is new cart' + cart)
     }, [cart])
 
     return (
         <div className='text-light' style={{minHeight: '100vh'}}>
-            <h1>Cart!</h1>
+            <h1>Checkout cart</h1>
             <Resume items={cart}/>
             <CartItemList items={cart}></CartItemList>
         </div>
