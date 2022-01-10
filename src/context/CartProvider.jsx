@@ -7,6 +7,11 @@ function CartProvider({children}) {
 
     const [cart, setCart] = useState([])
     
+    function removeElement(id){
+        let newCart = cart.filter(element => element.id !== id)
+        setCart(newCart)
+    }
+
     function addElementsInCart(cart, item, q){
         const index = cart.findIndex((cart) => cart.id == item.id)
         const aux = cart[index].cuantity 
@@ -29,7 +34,7 @@ function CartProvider({children}) {
     }
    
     return (
-        <CartContext.Provider value={{cart, setCart, addCart}}>
+        <CartContext.Provider value={{cart, setCart, addCart, removeElement}}>
             {children}
         </CartContext.Provider>
     )
