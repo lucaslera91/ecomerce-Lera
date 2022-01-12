@@ -44,14 +44,11 @@ function ConfirmationForm() {
 
             //setForm({...form, items: [...form.items, auxArray ] } )
             console.log(auxArray)
-            setTimeout(() => {
-                setForm({...form, 
+            setForm({...form, 
                     items: auxArray,
                     date: Date().toString(),
                     total: aux})
-            }, 1);
-            await addItem(form)
-            if(purchaseId != ''){
+            addItem(form)
                 Swal.fire({
                     //position: 'top-end',
                     icon: 'success',
@@ -59,8 +56,6 @@ function ConfirmationForm() {
                     showConfirmButton: false,
                     timer: 1500
                   })
-            }
-            
               //setCart([])
               //window.location.assign(`/checkout/${purchaseId}`)
         }
