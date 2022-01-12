@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ItemCount from './ItemCount'
 
 export default function ItemDetail({ item, text }) {
-    console.log(item)
+    //console.log(item)
     const [bigImg, setImg] = useState()
     
     return (

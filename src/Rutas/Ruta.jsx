@@ -8,6 +8,8 @@ import Category from '../views/Category'
 import InputTest from '../views/InputTest'
 import CartProvider from '../context/CartProvider'
 import ListProvider from '../context/ListProvider'
+import CheckOut from '../views/CheckOut'
+import Confirmation from '../views/Confirmation'
 
 export default function Ruta() {
     return (
@@ -18,6 +20,7 @@ export default function Ruta() {
                         <Routes>
                                 <Route path='/' element={<Home/>}/>
                                 <Route path='/cart' element={<Cart/>}/>
+                                <Route path='/checkout' element={<CheckOut/>}/>
                                 <Route path='/detail/:idElement' element={<Detail/>}/>
                                 <Route path='/category/:idCategory' element={<Category/>}/>
                                 <Route path='/input' element={<InputTest/>}/>

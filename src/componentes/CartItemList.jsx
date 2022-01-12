@@ -6,16 +6,9 @@ function CartItemList({items}) {
     //get value from cart State
     //show items and add total
     const {cart, setCart, removeElement} = CartConsumer();
-    const aux = []
+    //const aux = []
+    
 
-//    function handleDelete(itemId){
-//     setCart([])
-//     const aux = items.findIndex(element => element.id == itemId)
-//         const remove = items.splice(aux,1)
-//          //setTimeout(() => {
-//             setCart(items) 
-//          //}, 1);
-// }
 useEffect(() => {
     console.log('change')
 }, [cart])

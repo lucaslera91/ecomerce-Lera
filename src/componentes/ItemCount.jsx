@@ -14,8 +14,8 @@ function ItemCount({stock, start, text, item}) {
     )
 }
 
-ItemCount.propTypes = {
+// ItemCount.propTypes = {
 
-}
+// }
 
 export default ItemCount;

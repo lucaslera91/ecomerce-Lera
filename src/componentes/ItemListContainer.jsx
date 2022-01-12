@@ -9,7 +9,7 @@ import { ListConsumer } from '../context/ListProvider'
 import {collection, doc, getDocs} from 'firebase/firestore'
 
 export default function ItemListContainer({greeting, Children, fn, id}) {
-    const {list, setList, getList} = ListConsumer();
+    const {list, getList} = ListConsumer();
 
     //const [items, setItems] = useState([]);
     async function asignList(){

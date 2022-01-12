@@ -10,12 +10,12 @@ function CartItem({item, count}) {
 
     return (
         <div className='d-flex align-items-center justify-content-center container' style={{minHeight: '100px'}}>
-            <h9 className='col-sm-4 col-4'>{title}</h9>  
+            <h5 className='col-sm-4 col-4'>{title}</h5>  
             <div className='d-flex flex-column justify-content-start p-1'>
-                <h9>${price}</h9>
-                <h9><b>#</b> {cuantity}</h9>
+                <h5>${price}</h5>
+                <h5><b>#</b> {cuantity}</h5>
             </div>
-            <h9><b>Subtotal:</b> {subtotal}</h9>
+            <h5><b>Subtotal:</b> {subtotal}</h5>
             <div className="container">
                 <img style={{contain: 'contain'}} className='col-sm-4 col- px-2 img-fluid rounded' src={picture} alt="Product Image"/>
             </div>
@@ -24,3 +24,4 @@ function CartItem({item, count}) {
 }
 
 export default CartItem
+//{ buyer: { name, phone, email }, items: [{ id, title, price }], date, total  }

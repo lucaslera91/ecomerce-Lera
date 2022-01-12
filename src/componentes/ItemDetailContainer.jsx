@@ -6,14 +6,17 @@ import { ListConsumer } from '../context/ListProvider'
 export default function ItemDetailContainer({text}) {
 
     const {idElement} = useParams()
-    console.log(idElement)
+    //console.log(idElement)
 
-    const {list, setList, getList, item, setItem, getDetailId} = ListConsumer();
+    const {item, getDetailId, addItem} = ListConsumer();
     async function setElement(){
         await getDetailId(idElement)
-        console.log('item ' + item)
+        //console.log('item ' + item)
     }
 
+    async function testFirebaseAdd(){
+        await addItem(idElement)
+    }
     // async function setElement(){
     //     await getList()
     //     console.log(list)
@@ -25,6 +28,7 @@ export default function ItemDetailContainer({text}) {
 
     useEffect(() => {
         setElement()
+        testFirebaseAdd()
      }, [])
 
     if(item.id != undefined){
