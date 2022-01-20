@@ -54,14 +54,14 @@ function ConfirmationForm() {
             <div className='d-flex flex-column align-items-center'>
                 <div className='d-flex justify-content-center p-0 w-100'>
                     <div className='row p-0 m-0 w-100 justify-content-center'>
-                        <div className=' col-sm-5 col-11 text-light d-flex flex-column p-0'>
+                        <div className=' col-sm-5 col-11 text-dark d-flex flex-column p-0'>
                             <form className='d-flex flex-column'>
                                 <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='name' type="text" placeholder='Name' />
                                 <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='phone' type="text" placeholder='Phone'/>
                                 <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='email' type="text" placeholder='E-mail'/> 
                             </form>
                         </div>
-                        <div className='col-sm-5 col-11 text-light d-flex align-items-center justify-content-center'>
+                        <div className='col-sm-5 col-11 text-dark d-flex align-items-center justify-content-center'>
                             <Resume items={cart}></Resume>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ function ConfirmationForm() {
                     <button className='bg-light w-25 border border-primary rounded text-primary m-2' onClick={submitHandle}>Confirm Purchase</button>
                     <Link className='w-100' to='/cart'><button className='w-25 bg-light border border-primary rounded text-primary m-2'>Back to cart</button></Link>
                 </div>
-                <h3 className='text-light'>{orderResponse}</h3>
+                <h3 className='text-dark'>{orderResponse}</h3>
             </div>
         )
 }

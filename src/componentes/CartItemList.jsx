@@ -27,7 +27,7 @@ useEffect(() => {
         return (
                 <div>
                     <h3>Add your First Item!</h3>
-                    <a className='text-decoration-none text-light' href="../"><button className='bg-light w-25 border border-primary rounded text-primary my-1'>Go to Home!</button></a>
+                    <a className='text-decoration-none text-dark' href="../"><button className='bg-light w-25 border border-primary rounded text-primary my-1'>Go to Home!</button></a>
                 </div>)
 }
   

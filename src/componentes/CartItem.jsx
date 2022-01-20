@@ -21,7 +21,7 @@ function CartItem({item, count}) {
                 <img  className=' img-fluid rounded' style={{height: 'auto', width: '1000px'}} src={picture} alt="Product Image"/>
             </div>
             </div>
-            <div className='border-bottom w-75'></div>
+            <div className='border-dark border-bottom w-75'></div>
         </div>
     )
 }

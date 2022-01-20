@@ -25,7 +25,7 @@ export default function Category({text}) {
     return (
         <div>
             <NavBar/>
-            <div className="bg-transparent text-light d-flex flex-column align-content-center justify-content-start" style={{minHeight:  '100vh'}}>
+            <div className="bg-transparent text-dark d-flex flex-column align-content-center justify-content-start" style={{minHeight:  '100vh'}}>
             <h1 className='my-5'>{aux}</h1>
                 <div className="bg-transparent d-flex align-content-center justify-content-center flex-wrap">
                     <ItemList items={category}></ItemList>
