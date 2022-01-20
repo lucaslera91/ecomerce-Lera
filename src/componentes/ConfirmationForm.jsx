@@ -6,23 +6,19 @@ import { ListConsumer } from '../context/ListProvider'
 import {checkIfEmpty} from '../helper'
 //import { stringify } from '@firebase/util'
 import Swal from 'sweetalert2'
-import { PureComponent } from 'react/cjs/react.production.min'
 
 function ConfirmationForm() {
-    const {cart, setCart} = CartConsumer();
-    const {addItem, purchaseId, setPurchaseId} = ListConsumer();
+    const {cart, total} = CartConsumer();
+    const {addItem, purchaseId} = ListConsumer();
     const [orderResponse, setOrderResponse] = useState('')
     const [form, setForm] = useState({
         buyer:{ 
              name: '',
              phone: '',
              email: '' },
-         items: [{
-                 id: '',
-                 title: '',
-                 price: 0 }],
+         items: cart,
          date: Date().toString(),
-         total: 0
+         total: total
     })
     async function submitHandle(){
         //validate form
@@ -31,66 +27,37 @@ function ConfirmationForm() {
                 icon: 'warning',
                 title: 'Oops...',
                 text: 'Please fill all the fields',
-                //footer: '<a href="">Why do I have this issue?</a>'
-              })
+            })
         }else{
-            let aux = 0
-            const auxArray = []
-            cart.map(element => {
-                //auxArray = [...auxArray, {id: element.id, title: element.title, price: element.price}]
-                aux += element.cuantity * element.price
-                auxArray.push({id: element.id, title: element.title, price: element.price})
-            });
-
-            //setForm({...form, items: [...form.items, auxArray ] } )
-            console.log(auxArray)
-            setForm({...form, 
-                    items: auxArray,
-                    date: Date().toString(),
-                    total: aux})
             addItem(form)
-                Swal.fire({
-                    //position: 'top-end',
-                    icon: 'success',
-                    title: 'Your purchase was succesfull',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-              //setCart([])
-              //window.location.assign(`/checkout/${purchaseId}`)
+            Swal.fire({
+                icon: 'success',
+                title: 'Your purchase was succesfull',
+                showConfirmButton: false,
+                timer: 1500
+            })
         }
     }
 
     function handleForm(e){
         const {name, value} = e.target
         setForm({...form, buyer: {...form.buyer, [name]: value} } )
-        //console.log(form)
     }
 
     useEffect(() => {
-        console.log(form)
-        console.log(purchaseId)
         setOrderResponse('Purchase order: ' + purchaseId)
-    }, [form, purchaseId])
-        //const data = {buyer:{ 
-        //     name: 'Pedro2',
-        //     phone: '23413215',
-        //     email: 'juan@topo.com' },
-        // items: [{
-        //         id: 'aaa',
-        //         title: 'HP',
-        //         price: 31234 }],
-        // date: Date().toString(),
-        // total: 13251}
+    }, [purchaseId])
     
         return (
             <div>
                 <div className='d-flex justify-content-center p-0 w-100'>
                     <div className='row p-0 m-0 w-100 justify-content-center'>
                         <div className=' col-sm-5 col-11 text-light d-flex flex-column p-0'>
-                            <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='name' type="text" placeholder='Name' />
-                            <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='phone' type="text" placeholder='Phone'/>
-                            <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='email' type="text" placeholder='E-mail'/> 
+                            <form>
+                                <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='name' type="text" placeholder='Name' />
+                                <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='phone' type="text" placeholder='Phone'/>
+                                <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='email' type="text" placeholder='E-mail'/> 
+                            </form>
                         </div>
                         <div className='col-sm-5 col-11 text-light d-flex align-items-center justify-content-center'>
                             <Resume items={cart}></Resume>
@@ -105,5 +72,13 @@ function ConfirmationForm() {
             </div>
         )
 }
+
+//<form >
+//<input  onChange={(e) => setForm({...form, buyer: e.target.value})} className='form-control my-1' type="text" value={form.buyer.} name='nombre' placeholder='Nombre del Evento' />
+//<input  onChange={(e) => setForm({...form, descripcion: e.target.value})} className='form-control my-1' type="text" value={form.descripcion} name='descripcion' size="100" placeholder='Descripcion' />
+//<input  onChange={(e) => setForm({...form, ubicacion: e.target.value})} className='form-control my-1' type="text" value={form.ubicacion} name='ubicacion' size="50" placeholder='Ubicacion' />
+//<input  onChange={(e) => setForm({...form, fecha: e.target.value})} className='form-control my-1' type="date" value={form.fecha} name='fecha' placeholder='Fecha'  />
+//</form>
+//
 
 export default ConfirmationForm

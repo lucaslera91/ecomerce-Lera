@@ -6,6 +6,9 @@ export const CartConsumer = () => useContext(CartContext);
 function CartProvider({children}) {
 
     const [cart, setCart] = useState([])
+    const [total, setTotal] = useState('')
+
+
     
     function removeElement(id){
         let newCart = cart.filter(element => element.id !== id)
@@ -22,6 +25,7 @@ function CartProvider({children}) {
             alert(`Sorry we couldn't add ${q} more items, ${item.stock} Stock left and there is already ${aux} in cart!`)
         }
     }
+
     function addCart(item, q){
         if(validateObj(cart, item, 'id')) {
             addElementsInCart(cart, item, q)
@@ -33,8 +37,9 @@ function CartProvider({children}) {
         //setCart([...cart, item])
     }
    
+
     return (
-        <CartContext.Provider value={{cart, setCart, addCart, removeElement}}>
+        <CartContext.Provider value={{cart, total, setCart, addCart, removeElement, setTotal}}>
             {children}
         </CartContext.Provider>
     )

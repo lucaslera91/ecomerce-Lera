@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { CartConsumer } from '../context/CartProvider'
+
 
 function Resume({items}) {
+    const {setTotal} = CartConsumer();
+
     let total = 0
     console.log(items)
     items.forEach(element => {
         total += element.cuantity * element.price
     });
-
-
-
+    setTotal(total)
 
     if (items.length < 1){
         return <h3>No items in cart</h3>
