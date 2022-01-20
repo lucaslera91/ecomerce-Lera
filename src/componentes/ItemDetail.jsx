@@ -6,9 +6,9 @@ export default function ItemDetail({ item, text }) {
     const [bigImg, setImg] = useState()
     
     return (
-        <div className='w-100 d-flex justify-content-center text-light' style={{ minHeight: '100vh' }}>
+        <div className='w-100 d-flex justify-content-center text-light ' >
             <div className='container-fluid border-secondary rounded w-100 m-2 h-100vh'>
-                <div className='row border border-1'>
+                <div className='row border rounded ' style={{ minHeight: '90vh' }}>
                     <div className='col-2 '>
                         <img className='img-fluid border border-2 border-secondary rounded my-2' onClick={()=>{setImg(item.picture)}} style={{ maxSize: '30px' }} src={item.picture} alt="" />
                         <img className='img-fluid border border-2 border-secondary rounded my-2' onClick={()=>{setImg(item.picture1)}} style={{ maxSize: '30px' }} src={item.picture1} alt="" />
@@ -16,11 +16,11 @@ export default function ItemDetail({ item, text }) {
                         <img className='img-fluid border border-2 border-secondary rounded my-2' onClick={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
                     </div>
                     
-                    <div className='col-8 d-flex justify-content-center align-items-center'>
+                    <div className='col-7 d-flex justify-content-center align-items-center'>
                         <img className='img-fluid border border-1 rounded' src={bigImg} alt="" />
                     </div>
 
-                    <div className='col-2 d-flex justify-content-center align-items-center flex-column'>
+                    <div className='col-3 d-flex justify-content-center align-items-center flex-column'>
                         <div>
                             <h3>{item.title}</h3>
                         </div>

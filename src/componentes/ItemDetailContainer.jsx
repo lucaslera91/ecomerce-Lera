@@ -14,9 +14,9 @@ export default function ItemDetailContainer({text}) {
         //console.log('item ' + item)
     }
 
-    async function testFirebaseAdd(){
-        await addItem(idElement)
-    }
+    //async function testFirebaseAdd(){
+    //    await addItem(idElement)
+    //}
     // async function setElement(){
     //     await getList()
     //     console.log(list)
@@ -28,7 +28,7 @@ export default function ItemDetailContainer({text}) {
 
     useEffect(() => {
         setElement()
-        testFirebaseAdd()
+        //testFirebaseAdd()
      }, [])
 
     if(item.id != undefined){
