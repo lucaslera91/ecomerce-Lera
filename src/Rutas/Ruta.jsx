@@ -18,6 +18,7 @@ export default function Ruta() {
             <BrowserRouter>
                 <CartProvider>
                     <ListProvider>
+                        
                         <Routes>
                             <Route path='/' element={<Home/>}/>
                             <Route path='/cart' element={<Cart/>}/>
@@ -27,6 +28,8 @@ export default function Ruta() {
                             <Route path='/input' element={<InputTest/>}/>
                             <Route path='*' element={<Error/>}/>
                         </Routes>
+                        <Footer/>
+
                     </ListProvider>
                 </CartProvider>
             </BrowserRouter>

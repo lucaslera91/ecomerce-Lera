@@ -15,11 +15,13 @@ useEffect(() => {
     
     if(Array.isArray(items) && items.length > 0){
         return items.map((element) => 
-                 <div className='border-bottom d-flex justify-content-center align-items-center col-12'>
-                     <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
-                     <div className='d-flex justify-content-center col-2'>
-                         <button className='bg-secondary text-light w-75 border border-dark rounded p-0' onClick={()=>removeElement( element.id)}>Delete</button> 
-                     </div>
+                 <div className='d-flex justify-content-center align-items-center col-md-12 '>
+                    <div className='d-flex justify-content-between'>
+                        <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
+                        <div className='d-flex justify-content-center align-items-center'>
+                            <i onClick={()=>removeElement( element.id)} class="far fa-trash-alt fa-2x "></i> 
+                        </div>
+                    </div>
                  </div>);
     }else{
         return (

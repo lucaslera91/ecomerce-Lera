@@ -20,13 +20,13 @@ export default function ItemListContainer({greeting, Children, fn, id}) {
         asignList()
      }, [])
 
-    let containerHeight = "auto"
+    let containerHeight = "90vh"
 
     return (
         
-        <div className="bg-transparent text-light d-flex flex-column align-content-center justify-content-center" style={{height:  containerHeight}}>
+        <div className="bg-transparent text-light d-flex flex-column align-content-center justify-content-start" style={{minHeight:  containerHeight}}>
             <h2>{greeting}</h2>
-            <div className="bg-transparent d-flex align-content-center justify-content-center flex-wrap">
+            <div className="bg-transparent d-flex align-content-start justify-content-center flex-wrap">
                 {Children}
                 <ItemList items={list} fn={fn}></ItemList>
             </div>
