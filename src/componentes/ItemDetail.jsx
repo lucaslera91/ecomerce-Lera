@@ -3,8 +3,12 @@ import ItemCount from './ItemCount'
 
 export default function ItemDetail({ item, text }) {
     //console.log(item)
-    const [bigImg, setImg] = useState()
+    const [bigImg, setImg] = useState('')
     
+    useEffect(() => {
+        setImg(item.picture)
+      }, [item])
+
     return (
         <div className='w-100 d-flex justify-content-center text-light ' >
             <div className='container-fluid border-secondary rounded w-100 m-2 h-100vh'>
@@ -16,8 +20,11 @@ export default function ItemDetail({ item, text }) {
                         <img className='img-fluid border border-2 border-secondary rounded my-2' onClick={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
                     </div>
                     
-                    <div className='col-7 d-flex justify-content-center align-items-center'>
+                    <div className='col-7 d-flex flex-column justify-content-center align-items-center'>
                         <img className='img-fluid border border-1 rounded' src={bigImg} alt="" />
+                        <div className='py-3'>
+                                {item.descripcion}
+                            </div>
                     </div>
 
                     <div className='col-3 d-flex justify-content-center align-items-center flex-column'>
@@ -25,9 +32,7 @@ export default function ItemDetail({ item, text }) {
                             <h3>{item.title}</h3>
                         </div>
                         <div>
-                            <div className='py-3'>
-                                {item.descripcion}
-                            </div>
+                            
                             <div >
                                 <h3 className="font-weight-bold">${item.price}</h3>
                             </div>
