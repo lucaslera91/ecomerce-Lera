@@ -17,7 +17,7 @@ function ButtonCounter({start, stock, text, item}) {
     const classAddMore = `${addMore} bg-light w-100 border border-primary rounded text-primary my-1`
     const classAux = `${display} container-fluid d-flex justify-content-between flex-column w-100 p-0 my-1`
     const classTextAux = `bg-transparent text-${text} border-0 w-100`
-    const resultadoClass = `${resultado} bg-primary text-dark rounded my-1`
+    const resultadoClass = `${resultado} bg-primary text-light rounded my-1`
     const {cart, addCart} = CartConsumer();
     const onAdd = () => {
         if (contador < stock) {
@@ -50,7 +50,7 @@ function ButtonCounter({start, stock, text, item}) {
             <div  className={classAux}>
                 <div className='d-flex w-100'>
                     <button className={classTextAux} onClick={onAdd}><i className="fas fa-plus"></i></button>
-                    <h3>{contador}</h3>
+                    <h3 className='text-light'>{contador}</h3>
                     <button className={classTextAux} onClick={less}><i className="fas fa-minus"></i></button>
                 </div>
                 <div className='w-100 '>

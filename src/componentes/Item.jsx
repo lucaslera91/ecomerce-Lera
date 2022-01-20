@@ -11,12 +11,12 @@ function Item({item, fn, text}) {
 
     return (
         <div className='col-4 m-2 text-dark' style={{width: 200}}>
-            <div className="container-fluid w-100 border border-dark p-1 rounded" style={{backgroundColor: '#DCD8D8'}}>
+            <div className="container-fluid w-100 border border-light p-1 rounded bg-transparent">
             <div className='w-100 py-1'>
-                <h3 className='d-flex justify-content-center align-items-center' style={{height: 60}}>{item.title}</h3>
+                <h3 className='d-flex justify-content-center align-items-center text-light' style={{height: 60}}>{item.title}</h3>
             </div>
             <div className='w-100 py-1'>
-                <img className="img-fluid img-thumbnail rounded border border-secondary" style={{height: 200}} src={item.picture}/>
+                <img className="img-fluid img-thumbnail rounded border border-light" style={{height: 200}} src={item.picture}/>
             </div>
             <div>
                 <Link to={`/detail/${item.id}`}>
@@ -26,7 +26,7 @@ function Item({item, fn, text}) {
             <div>
                 <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
             </div>
-            <div>
+            <div className='text-light'>
                Stock: {item.stock}
             </div>
         </div>

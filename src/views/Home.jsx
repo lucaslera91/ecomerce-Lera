@@ -12,7 +12,7 @@ export default function Home() {
         <div>
             <NavBar/>
 
-            <ItemListContainer text={'dark'} greeting={`Elegi la computadora que mas necesites!`}>
+            <ItemListContainer text={'light'} greeting={`Elegi la computadora que mas necesites!`}>
             
             </ItemListContainer>
         </div>

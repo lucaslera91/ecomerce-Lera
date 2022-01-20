@@ -53,7 +53,7 @@ function ConfirmationForm() {
                 <div className='d-flex justify-content-center p-0 w-100'>
                     <div className='row p-0 m-0 w-100 justify-content-center'>
                         <div className=' col-sm-5 col-11 text-light d-flex flex-column p-0'>
-                            <form>
+                            <form className='d-flex flex-column'>
                                 <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='name' type="text" placeholder='Name' />
                                 <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='phone' type="text" placeholder='Phone'/>
                                 <input onBlur={(e) => handleForm(e) } className='my-2 py-1 rounded' name='email' type="text" placeholder='E-mail'/> 
