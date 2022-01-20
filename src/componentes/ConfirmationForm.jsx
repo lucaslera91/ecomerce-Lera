@@ -29,7 +29,9 @@ function ConfirmationForm() {
                 text: 'Please fill all the fields',
             })
         }else{
-            addItem(form)
+
+            await addItem(form)
+
             Swal.fire({
                 icon: 'success',
                 title: 'Your purchase was succesfull',

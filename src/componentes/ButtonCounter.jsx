@@ -16,7 +16,7 @@ function ButtonCounter({start, stock, text, item}) {
 
     const classAddMore = `${addMore} bg-light w-100 border border-primary rounded text-primary my-1`
     const classAux = `${display} container-fluid d-flex justify-content-between flex-column w-100 p-0 my-1`
-    const classTextAux = `bg-transparent text-${text} border-0 w-100`
+    const classTextAux = `bg-transparent text-${'light'} border-0 w-100`
     const resultadoClass = `${resultado} bg-primary text-light rounded my-1`
     const {cart, addCart} = CartConsumer();
     const onAdd = () => {

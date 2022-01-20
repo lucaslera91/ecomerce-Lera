@@ -14,18 +14,18 @@ function ListProvider({children}) {
     const [item, setItem] = useState({})
     const [category, setCategory] = useState([])
     const [purchaseId, setPurchaseId] = useState('')
-    const [add, setAdd] = useState({ 
-        buyer:{ 
-            name: '',
-            phone: '',
-            email: '' },
-        items: [{
-                id: '',
-                title: '',
-                price: 31234 }],
-        date: 30/12/2021,
-        total: 13251
-    })
+   // const [add, setAdd] = useState({ 
+   //     buyer:{ 
+   //         name: '',
+   //         phone: '',
+   //         email: '' },
+   //     items: [{
+   //             id: '',
+   //             title: '',
+   //             price: 0 }],
+   //     date: 30/12/2021,
+   //     total: 0
+   // })
 
     function getList(){
         const itemRef = collection(db, 'items')
@@ -61,6 +61,7 @@ function ListProvider({children}) {
             const itemAdded = await addDoc(col, data)
             setPurchaseId(itemAdded.id)
             console.log(itemAdded.id)
+            
         }
 
         
