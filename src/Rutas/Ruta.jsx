@@ -10,6 +10,7 @@ import CartProvider from '../context/CartProvider'
 import ListProvider from '../context/ListProvider'
 import CheckOut from '../views/CheckOut'
 import Confirmation from '../views/Confirmation'
+import Footer from '../componentes/Footer'
 
 export default function Ruta() {
     return (
@@ -18,16 +19,16 @@ export default function Ruta() {
                 <CartProvider>
                     <ListProvider>
                         <Routes>
-                                <Route path='/' element={<Home/>}/>
-                                <Route path='/cart' element={<Cart/>}/>
-                                <Route path='/checkout' element={<CheckOut/>}/>
-                                <Route path='/detail/:idElement' element={<Detail/>}/>
-                                <Route path='/category/:idCategory' element={<Category/>}/>
-                                <Route path='/input' element={<InputTest/>}/>
-                                <Route path='*' element={<Error/>}/>
-                            </Routes>
-                        </ListProvider>
-                    </CartProvider>
+                            <Route path='/' element={<Home/>}/>
+                            <Route path='/cart' element={<Cart/>}/>
+                            <Route path='/checkout' element={<CheckOut/>}/>
+                            <Route path='/detail/:idElement' element={<Detail/>}/>
+                            <Route path='/category/:idCategory' element={<Category/>}/>
+                            <Route path='/input' element={<InputTest/>}/>
+                            <Route path='*' element={<Error/>}/>
+                        </Routes>
+                    </ListProvider>
+                </CartProvider>
             </BrowserRouter>
         </div>
     )

@@ -11,7 +11,7 @@ function Item({item, fn, text}) {
 
     return (
         <div className='col-4 m-2 text-dark' style={{width: 200}}>
-            <div className="container-fluid w-100 border border-light p-1 rounded bg-transparent">
+            <div className="container-fluid w-100 border-bottom border-2 border-light p-1 rounded bg-transparent">
             <div className='w-100 py-1'>
                 <h3 className='d-flex justify-content-center align-items-center text-light' style={{height: 60}}>{item.title}</h3>
             </div>
