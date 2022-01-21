@@ -15,7 +15,6 @@ export function checkIfEmpty(form){
     const {buyer: {name, phone, email}} = form
 
     if (name == '' || phone == '' || email == ''){
-        
         return true
     } else{
         return false
