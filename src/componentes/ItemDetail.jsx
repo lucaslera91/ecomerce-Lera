@@ -9,8 +9,8 @@ export default function ItemDetail({ item, text }) {
       }, [item])
 
     return (
-        <div className='w-100 d-flex justify-content-center text-dark ' >
-            <div className='container-fluid border-dark rounded w-100 m-2 h-100vh'>
+        <div className='w-100 d-flex justify-content-center text-dark' >
+            <div className='container-fluid border-dark rounded w-100  h-100vh'>
                 <div className='row border rounded ' style={{ minHeight: '90vh' }}>
                     <div className='col-2 '>
                         <img className='img-fluid border border-2 border-dark rounded my-2' onClick={()=>{setImg(item.picture)}} style={{ maxSize: '30px' }} src={item.picture} alt="" />
