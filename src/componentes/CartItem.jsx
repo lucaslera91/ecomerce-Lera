@@ -16,7 +16,7 @@ function CartItem({item}) {
             </div>
             <h5 className='col-3 p-1'><b>Subtotal:</b> {subtotal}</h5>
             <div className="container p-1 d-flex align-items-center justify-content-center" >
-                <img  className=' img-fluid rounded' style={{ minwidth: '150px', height: 'auto', width: '1000px'}} src={picture} alt="Product Image"/>
+                <img  className=' img-fluid rounded' style={{ minwidth: '150px', height: 'auto', width: '1000px'}} src={picture} alt=""/>
             </div>
             </div>
             <div className='border-dark border-bottom w-75'></div>

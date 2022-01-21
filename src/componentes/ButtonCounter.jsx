@@ -9,7 +9,7 @@ function ButtonCounter({start, stock, item}) {
     
     const [display, setDisplay] = useState(`visible`)
     const [resultado, setDisplayResultado] = useState(`d-none`)
-    const [compra, setCompra] = useState(0)
+    const [setCompra] = useState(0)
     const [addMore, setAddMore] = useState('d-none')
 
     const classAddMore = `${addMore} bg-light w-100 border border-primary rounded text-primary my-1`
