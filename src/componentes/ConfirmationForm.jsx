@@ -87,8 +87,8 @@ function ConfirmationForm() {
                     </div>
                 </div>
                 <div className='d-flex flex-column align-items-center w-100'>
-                    <button className='bg-light w-25 border border-primary rounded text-primary m-2' onClick={submitHandle}>Confirm Purchase</button>
-                    <Link className='w-100' to="/"><button onClick={postSubmit} className='w-25 bg-light border border-primary rounded text-primary m-2'>Home</button></Link>
+                    <button className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2' onClick={submitHandle}>Confirm Purchase</button>
+                    <Link className='col-6 col-sm-3 ' to="/"><button onClick={postSubmit} className='w-100 bg-light border border-primary rounded text-primary'>Home</button></Link>
                 </div>
 
                    
