@@ -1,4 +1,3 @@
-import React, {useEffect, useState}from 'react'
 import Item from './Item';
 
 function ItemList({items, fn, text}) {
