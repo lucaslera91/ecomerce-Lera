@@ -20,12 +20,12 @@ export default function Ruta() {
                     <ListProvider>
                         
                         <Routes>
-                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/' element={<Home/>}/>
-                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/cart' element={<Cart/>}/>
-                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/checkout' element={<CheckOut/>}/>
-                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/detail/:idElement' element={<Detail/>}/>
-                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/category/:idCategory' element={<Category/>}/>
-                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/input' element={<InputTest/>}/>
+                            <Route path='/build/' element={<Home/>}/>
+                            <Route path='/cart' element={<Cart/>}/>
+                            <Route path='/checkout' element={<CheckOut/>}/>
+                            <Route path='/detail/:idElement' element={<Detail/>}/>
+                            <Route path='/category/:idCategory' element={<Category/>}/>
+                            <Route path='/input' element={<InputTest/>}/>
                             <Route path='*' element={<Error/>}/>
                         </Routes>
                         <Footer/>
