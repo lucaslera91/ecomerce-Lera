@@ -14,10 +14,10 @@ useEffect(() => {
     
     if(Array.isArray(items) && items.length > 0){
         return items.map((element) => 
-                 <div className='d-flex justify-content-center align-items-center col-md-12 '>
-                    <div className='d-flex justify-content-between'>
+                 <div className='d-flex justify-content-center align-items-center col-11'>
+                    <div className='d-flex justify-content-between col-md-9'>
                         <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
-                        <div className='d-flex justify-content-center align-items-center'>
+                        <div className='d-flex justify-content-center align-items-center col-3'>
                             <i onClick={()=>removeElement( element.id)} className="far fa-trash-alt fa-2x "></i> 
                         </div>
                     </div>
