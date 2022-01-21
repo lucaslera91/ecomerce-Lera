@@ -18,7 +18,7 @@ useEffect(() => {
                     <div className='d-flex justify-content-between'>
                         <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
                         <div className='d-flex justify-content-center align-items-center'>
-                            <i onClick={()=>removeElement( element.id)} class="far fa-trash-alt fa-2x "></i> 
+                            <i onClick={()=>removeElement( element.id)} className="far fa-trash-alt fa-2x "></i> 
                         </div>
                     </div>
                  </div>);

@@ -33,8 +33,6 @@ function CartProvider({children}) {
             item.cuantity = q
             setCart([...cart, item])
         }
-        //alert(validateObj(cart, item, 'id'))
-        //setCart([...cart, item])
     }
    
 

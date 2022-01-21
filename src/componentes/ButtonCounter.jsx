@@ -9,7 +9,7 @@ function ButtonCounter({start, stock, item}) {
     
     const [display, setDisplay] = useState(`visible`)
     const [resultado, setDisplayResultado] = useState(`d-none`)
-    const [setCompra] = useState(0)
+    //const [compra, setCompra] = useState(0)
     const [addMore, setAddMore] = useState('d-none')
 
     const classAddMore = `${addMore} bg-light w-100 border border-primary rounded text-primary my-1`
@@ -33,9 +33,11 @@ function ButtonCounter({start, stock, item}) {
          setAddMore('d-none')
     }
     function handleAddToCart(item){
+        console.log(item)
+        console.log(contador)
          setDisplay('d-none')
          setDisplayResultado('visible')
-         setCompra(contador)
+         //setCompra(contador)
          addCart(item, contador)
          setAddMore('visible')
     }

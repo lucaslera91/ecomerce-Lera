@@ -7,7 +7,7 @@ if(items.length < 1){
  
     return(
         <div className="border-3 border border-dark rounded m-3 p-3" style={{backgroundImage: `url(${url})`}}>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
