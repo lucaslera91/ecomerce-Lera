@@ -8,7 +8,7 @@ const NavBar = () => {
 
     return (<nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">
         
-            <div className="col-sm-10 px-3 d-flex justify-content-start"><Link className='text-decoration-none' to='/'><a className="navbar-brand">CompuShop</a></Link></div>
+            <div className="col-sm-10 px-3 d-flex justify-content-start"><Link className='text-decoration-none text-light' to='/'><h3>CompuShop</h3></Link></div>
 
             <div className="col-sm-1 p-1"><Link className='d-flex text-decoration-none text-light' to='/cart'><CartWidget className="text-decoration-none" color="light" />{cart.length}</Link></div>
 

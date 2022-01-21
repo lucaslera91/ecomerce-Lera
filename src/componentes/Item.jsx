@@ -14,7 +14,7 @@ function Item({item, fn, text}) {
                 <h3 className='d-flex justify-content-center align-items-center text-dark' style={{height: 60}}>{item.title}</h3>
             </div>
             <div className='w-100 py-1'>
-                <img className="img-fluid img-thumbnail rounded border border-dark" style={{height: 200}} src={item.picture}/>
+                <img className="img-fluid img-thumbnail rounded border border-dark" style={{height: 200}} src={item.picture} alt=''/>
             </div>
             <div>
                 <Link to={`/detail/${item.id}`}>

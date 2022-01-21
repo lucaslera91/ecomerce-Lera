@@ -1,11 +1,11 @@
-import React,{ useEffect, useState } from 'react'
+import React,{ useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import ItemList from '../componentes/ItemList'
 import NavBar from '../componentes/Navbar'
 import { ListConsumer } from '../context/ListProvider'
 
 
-export default function Category({text}) {
+export default function Category() {
 
     const {category, getCategory} = ListConsumer();
 
@@ -13,13 +13,14 @@ export default function Category({text}) {
     console.log(idCategory)
 
     const aux = idCategory.toUpperCase()
+    
     async function asignCategory(){
         await getCategory(idCategory)
-        //alert(category)
      }
 
     useEffect(() => {
        asignCategory()
+       // eslint-disable-next-line react-hooks/exhaustive-deps
      }, [category])
 
     return (

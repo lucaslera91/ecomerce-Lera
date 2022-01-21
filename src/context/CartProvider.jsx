@@ -16,7 +16,7 @@ function CartProvider({children}) {
     }
 
     function addElementsInCart(cart, item, q){
-        const index = cart.findIndex((cart) => cart.id == item.id)
+        const index = cart.findIndex((cart) => cart.id === item.id)
         const aux = cart[index].cuantity 
         if ((aux + q) <= item.stock){
             cart[index].cuantity = (aux + q)

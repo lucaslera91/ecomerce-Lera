@@ -60,7 +60,7 @@ function ConfirmationForm() {
 
     useEffect(() => {
         handlePostOrder()
-        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [purchaseId])
 
         return (

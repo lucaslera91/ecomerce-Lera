@@ -6,7 +6,7 @@ import Resume from './Resume';
 
 function CartView() {
 
-    const {cart, setCart} = CartConsumer();
+    const {cart} = CartConsumer();
     useEffect(() => {
     }, [cart])
 

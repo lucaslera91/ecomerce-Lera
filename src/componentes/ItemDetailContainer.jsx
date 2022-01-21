@@ -15,9 +15,10 @@ export default function ItemDetailContainer({text}) {
 
     useEffect(() => {
         setElement()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
      }, [])
 
-    if(item.id != undefined){
+    if(item.id !== undefined){
         return <ItemDetail text={text} item={item}></ItemDetail>;
     }else{
         return <h3>Loading...</h3>

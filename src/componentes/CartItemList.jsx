@@ -5,7 +5,7 @@ import { CartConsumer } from '../context/CartProvider'
 function CartItemList({items}) {
     //get value from cart State
     //show items and add total
-    const {cart, setCart, removeElement} = CartConsumer();
+    const {cart, removeElement} = CartConsumer();
     
 
 useEffect(() => {
