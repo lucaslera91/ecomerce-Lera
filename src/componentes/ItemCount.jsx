@@ -1,9 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import react,{ useState } from "react";
 import ButtonCounter from './ButtonCounter';
-import BtnAddToCart from './BtnAddToCart';
-//import {stockCount} from '../componentes/ButtonCounter'
 
 function ItemCount({stock, start, text, item}) {
 
@@ -14,8 +10,5 @@ function ItemCount({stock, start, text, item}) {
     )
 }
 
-// ItemCount.propTypes = {
-
-// }
 
 export default ItemCount;

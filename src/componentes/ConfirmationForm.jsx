@@ -4,14 +4,12 @@ import Resume from './Resume'
 import { CartConsumer } from '../context/CartProvider'
 import { ListConsumer } from '../context/ListProvider'
 import {checkIfEmpty} from '../helper'
-//import { stringify } from '@firebase/util'
 import Swal from 'sweetalert2'
 
 
 function ConfirmationForm() {
     const {cart, setCart, total} = CartConsumer();
     const {addItem, purchaseId, setPurchaseId} = ListConsumer();
-    const [backHome, setBackHome] = useState([])
     const [orderResponse, setOrderResponse] = useState('')
     const [form, setForm] = useState({
         buyer:{ 
@@ -27,17 +25,13 @@ function ConfirmationForm() {
         console.log(form)
         //validate form
         if (checkIfEmpty(form)){
-            
             Swal.fire({
                 icon: 'warning',
                 title: 'Oops...',
                 text: 'Please fill all the fields',
             })
         }else{
-
             addItem(form)
-
-
 
             Swal.fire({
                 icon: 'success',
@@ -66,10 +60,9 @@ function ConfirmationForm() {
 
     useEffect(() => {
         handlePostOrder()
-        //startButton()
         
     }, [purchaseId])
-    
+
         return (
             <div className='d-flex flex-column align-items-center'>
                 <div className='d-flex justify-content-center p-0 w-100'>
@@ -97,13 +90,5 @@ function ConfirmationForm() {
         )
 }
 
-//<form >
-//<input  onChange={(e) => setForm({...form, buyer: e.target.value})} className='form-control my-1' type="text" value={form.buyer.} name='nombre' placeholder='Nombre del Evento' />
-//<input  onChange={(e) => setForm({...form, descripcion: e.target.value})} className='form-control my-1' type="text" value={form.descripcion} name='descripcion' size="100" placeholder='Descripcion' />
-//<input  onChange={(e) => setForm({...form, ubicacion: e.target.value})} className='form-control my-1' type="text" value={form.ubicacion} name='ubicacion' size="50" placeholder='Ubicacion' />
-//<input  onChange={(e) => setForm({...form, fecha: e.target.value})} className='form-control my-1' type="date" value={form.fecha} name='fecha' placeholder='Fecha'  />
-//</form>
-//
-// {backHome}
 
 export default ConfirmationForm

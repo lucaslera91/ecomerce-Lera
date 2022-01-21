@@ -1,8 +1,6 @@
 import React from 'react'
-import DeleteItem from './DeleteItem'
-import { CartConsumer } from '../context/CartProvider'
 
-function CartItem({item, count}) {
+function CartItem({item}) {
 
    const {title, price, cuantity, picture} = item
    const subtotal = price * cuantity
@@ -27,4 +25,3 @@ function CartItem({item, count}) {
 }
 
 export default CartItem
-//{ buyer: { name, phone, email }, items: [{ id, title, price }], date, total  }

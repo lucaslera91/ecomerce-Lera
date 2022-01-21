@@ -32,17 +32,9 @@ const NavBar = () => {
             </ul>
 
         </div>
-
-
-
-
-
-
-
     </nav>
 
     );
 }
 
 export default NavBar
-// <div className="d-flex flex-row">

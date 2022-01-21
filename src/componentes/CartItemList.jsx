@@ -6,7 +6,6 @@ function CartItemList({items}) {
     //get value from cart State
     //show items and add total
     const {cart, setCart, removeElement} = CartConsumer();
-    //const aux = []
     
 
 useEffect(() => {
@@ -30,15 +29,5 @@ useEffect(() => {
                     <a className='text-decoration-none text-dark' href="../"><button className='bg-light w-25 border border-primary rounded text-primary my-1'>Go to Home!</button></a>
                 </div>)
 }
-  
-//    
-    
-
- 
 }
-//handleDelete(items.indexOf(element)
-//this.delete.bind(this)
 export default CartItemList
-{/* <div>
-                    <CartItem item={element} key={element.id}></CartItem>
-                </div> ) */}

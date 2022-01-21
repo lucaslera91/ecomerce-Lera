@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from 'react'
-import ButtonCounter from './ButtonCounter'
+import React from 'react'
 import ItemCount from './ItemCount'
-import { Link, NavLink} from "react-router-dom";
-import BtnAddToCart from './BtnAddToCart';
+import { Link} from "react-router-dom";
 
 
 

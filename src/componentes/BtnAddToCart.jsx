@@ -1,10 +1,7 @@
 import React from 'react'
 import { CartConsumer } from '../context/CartProvider'
 
-export default function BtnAddToCart({data}) {
-    function eventHandle(){
-        alert('Add to cart '+ data )
-    }
+export default function BtnAddToCart() {
     const {cart} = CartConsumer();
     return (
         <div>
@@ -12,4 +9,3 @@ export default function BtnAddToCart({data}) {
         </div>
     )
 }
-//onClick={()=> eventHandle()}

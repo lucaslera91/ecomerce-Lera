@@ -1,12 +1,10 @@
-import React from 'react'
-import react, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { Link } from 'react-router-dom';
-import BtnAddToCart from './BtnAddToCart';
 import { CartConsumer } from '../context/CartProvider'
 
 
 
-function ButtonCounter({start, stock, text, item}) {
+function ButtonCounter({start, stock, item}) {
     const [contador, setContador] = useState(start);
     
     const [display, setDisplay] = useState(`visible`)
@@ -18,7 +16,7 @@ function ButtonCounter({start, stock, text, item}) {
     const classAux = `${display} container-fluid d-flex justify-content-between flex-column w-100 p-0 my-1`
     const classTextAux = `bg-transparent text-${'daek'} border-0 w-100`
     const resultadoClass = `${resultado} bg-primary text-dark rounded my-1`
-    const {cart, addCart} = CartConsumer();
+    const {addCart} = CartConsumer();
     const onAdd = () => {
         if (contador < stock) {
             setContador(contador + 1)
@@ -39,7 +37,6 @@ function ButtonCounter({start, stock, text, item}) {
          setDisplayResultado('visible')
          setCompra(contador)
          addCart(item, contador)
-         //alert(contador)
          setAddMore('visible')
     }
 
@@ -64,6 +61,3 @@ function ButtonCounter({start, stock, text, item}) {
       
 }
 export default ButtonCounter;
-
-//<BtnAddToCart onClick={()=>handleAddToCart()} data={contador}/>
-//

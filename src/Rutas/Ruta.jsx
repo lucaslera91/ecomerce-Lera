@@ -9,7 +9,6 @@ import InputTest from '../views/InputTest'
 import CartProvider from '../context/CartProvider'
 import ListProvider from '../context/ListProvider'
 import CheckOut from '../views/CheckOut'
-import Confirmation from '../views/Confirmation'
 import Footer from '../componentes/Footer'
 
 export default function Ruta() {
@@ -20,7 +19,7 @@ export default function Ruta() {
                     <ListProvider>
                         
                         <Routes>
-                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/build/' element={<Home/>}/>
+                            <Route path='/build/' element={<Home/>}/>
                             <Route path='/cart' element={<Cart/>}/>
                             <Route path='/checkout' element={<CheckOut/>}/>
                             <Route path='/detail/:idElement' element={<Detail/>}/>

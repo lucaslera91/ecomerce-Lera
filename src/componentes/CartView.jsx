@@ -8,7 +8,6 @@ function CartView() {
 
     const {cart, setCart} = CartConsumer();
     useEffect(() => {
-      //setCart(cart)
     }, [cart])
 
     if (cart.length < 1){

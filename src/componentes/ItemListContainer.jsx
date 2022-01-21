@@ -1,12 +1,6 @@
-import { Children } from 'react'
-import React, { useState,useEffect} from "react";
-import ItemCount from './ItemCount';
+import React, { useEffect} from "react";
 import ItemList from './ItemList';
-import axios from 'axios';
-import db from '../service'
-import ItemDetailContainer from './ItemDetailContainer'
 import { ListConsumer } from '../context/ListProvider'
-import {collection, doc, getDocs} from 'firebase/firestore'
 import Carusell from './Carusell';
 
 export default function ItemListContainer({greeting, Children, fn, id}) {
