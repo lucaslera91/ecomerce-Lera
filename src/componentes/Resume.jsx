@@ -9,9 +9,9 @@ function Resume({items}) {
     let total = 0
     console.log(items)
     items.forEach(element => {
-        total += element.cuantity * element.price
+        setTotal(total += element.cuantity * element.price)
     });
-    setTotal(total)
+    //setTotal(total)
 
     if (items.length < 1){
         return <h3>No items in cart</h3>
