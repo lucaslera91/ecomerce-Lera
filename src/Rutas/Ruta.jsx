@@ -20,7 +20,7 @@ export default function Ruta() {
                     <ListProvider>
                         
                         <Routes>
-                            <Route path='/build/' element={<Home/>}/>
+                            <Route path='https://cranky-euclid-ff8a8f.netlify.app/build/' element={<Home/>}/>
                             <Route path='/cart' element={<Cart/>}/>
                             <Route path='/checkout' element={<CheckOut/>}/>
                             <Route path='/detail/:idElement' element={<Detail/>}/>
