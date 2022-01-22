@@ -12,10 +12,10 @@ function ButtonCounter({start, stock, item}) {
     //const [compra, setCompra] = useState(0)
     const [addMore, setAddMore] = useState('d-none')
 
-    const classAddMore = `${addMore} bg-light w-50 border border-primary rounded text-primary my-1`
+    const classAddMore = `${addMore} bg-light w-75 border border-primary rounded text-primary my-1`
     const classAux = `${display} container-fluid d-flex justify-content-between flex-column w-100 p-0 my-1`
-    const classTextAux = `bg-transparent text-${'dark'} border-0 w-50`
-    const resultadoClass = `${resultado} bg-primary text-dark w-50 rounded my-1`
+    const classTextAux = `bg-transparent text-${'dark'} border-0 w-75 mx-auto`
+    const resultadoClass = `${resultado} bg-primary text-dark w-75 mx-auto rounded my-1`
     const {addCart} = CartConsumer();
     const onAdd = () => {
         if (contador < stock) {
@@ -53,12 +53,12 @@ function ButtonCounter({start, stock, item}) {
                     <button className={classTextAux} onClick={less}><i className="fas fa-minus"></i></button>
                 </div>
                 <div className='w-100 '>
-                    <button onClick={() => handleAddToCart(item)} className="bg-light w-50 border border-primary rounded text-primary p-0">Add to Cart</button>
+                    <button onClick={() => handleAddToCart(item)} className="bg-light w-75 border border-primary rounded text-primary p-0">Add to Cart</button>
                 </div>
             </div>
             <div><button onClick={handleAddMore} className={classAddMore}>Add more to cart</button></div>
             <div className={resultadoClass}>Product added to cart!</div>
-            <Link className='text-decoration-none w-50' to="/cart"><div className='bg-light w-50 mx-auto border border-primary rounded text-primary p-0" '>Go to cart!</div></Link>
+            <Link className='text-decoration-none w-75' to="/cart"><div className='bg-light w-75 mx-auto border border-primary rounded text-primary p-0" '>Go to cart!</div></Link>
         </div>);
       
 }

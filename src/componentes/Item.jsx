@@ -18,7 +18,7 @@ function Item({item, fn, text}) {
             </div>
             <div>
                 <Link to={`/detail/${item.id}`}>
-                <button className="bg-light w-50 border border-dark my-1 rounded text-dark" >Ver mas detalles!</button>
+                <button className="bg-light w-75 border border-dark my-1 rounded text-dark" >Ver mas detalles!</button>
                 </Link>
             </div>
             <div>
