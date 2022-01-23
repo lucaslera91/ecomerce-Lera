@@ -3,8 +3,6 @@ import CartItem from './CartItem'
 import { CartConsumer } from '../context/CartProvider'
 
 function CartItemList({items}) {
-    //get value from cart State
-    //show items and add total
     const {removeElement} = CartConsumer();
     
     if(items.length > 0){

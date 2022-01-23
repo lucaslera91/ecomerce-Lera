@@ -40,8 +40,6 @@ function ButtonCounter({start, stock, item}) {
          setAddMore('visible')
     }
 
-
-   
     return (
         <div className='p-1' style={{minHeight: '110px'}}>
             <div  className={classAux}>

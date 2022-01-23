@@ -2,8 +2,6 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import { Link} from "react-router-dom";
 
-
-
 function Item({item, text}) {
    
     return (

@@ -16,12 +16,8 @@ function ListProvider({children}) {
     const [purchaseId, setPurchaseId] = useState('')
 
     useMemo( () => {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
             return getList()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        
-            // Sreact-hooks/exhaustive-deps
-
     }, [] )
 
     function getList(){

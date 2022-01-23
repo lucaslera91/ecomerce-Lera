@@ -15,12 +15,9 @@ export default function ItemListContainer({greeting, Children, fn}) {
             if(list.length < 1){
             asignList()
             }
-        
             // eslint-disable-next-line react-hooks/exhaustive-deps
            }, [])
     
-
-
     let containerHeight = "90vh"
 
     return (

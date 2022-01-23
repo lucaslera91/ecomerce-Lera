@@ -5,7 +5,6 @@ function CartItem({item}) {
    const {title, price, cuantity} = item
    const subtotal = price * cuantity
 
-
     return (
         <div className='d-flex flex-column align-items-center col-10'>
             <div className='d-flex align-items-center justify-content-center container  mx-auto' style={{minHeight: '100px'}}>

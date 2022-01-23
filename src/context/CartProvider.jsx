@@ -7,9 +7,7 @@ function CartProvider({children}) {
 
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState('')
-
   
-    
     function removeElement(id){
         let newCart = cart.filter(element => element.id !== id)
         setCart(newCart)
@@ -35,7 +33,6 @@ function CartProvider({children}) {
         }
     }
    
-
     return (
         <CartContext.Provider value={{cart, total, setCart, addCart, removeElement, setTotal}}>
             {children}

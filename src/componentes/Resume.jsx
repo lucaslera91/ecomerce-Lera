@@ -7,11 +7,8 @@ function Resume({items}) {
 
     useEffect(()=>{
         setTotal((items.reduce((a,v) =>  a = a + (v.cuantity * v.price) , 0 )))
-
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
-
-    
 
     if (items.length < 1){
         return <h3>No items in cart</h3>
