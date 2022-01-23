@@ -1,18 +1,15 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import CartItem from './CartItem'
 import { CartConsumer } from '../context/CartProvider'
 
 function CartItemList({items}) {
     //get value from cart State
     //show items and add total
-    const {cart, removeElement} = CartConsumer();
+    const {removeElement} = CartConsumer();
     
 
-useEffect(() => {
-    console.log('change')
-}, [cart])
     
-    if(Array.isArray(items) && items.length > 0){
+    if(items.length > 0){
         return items.map((element) => 
                  <div className='d-flex justify-content-center align-items-center col-11'>
                     <div className='d-flex justify-content-between col-md-9'>

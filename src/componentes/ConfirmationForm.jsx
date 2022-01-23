@@ -41,7 +41,7 @@ function ConfirmationForm() {
             })
             setForm({...form, buyer: {...form.buyer,  name: '', phone: '', email: '' } } )
             setCart([])
-        }
+         }
     }
 
     function handleForm(e){
@@ -83,8 +83,6 @@ function ConfirmationForm() {
                     <button className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2' onClick={submitHandle}>Confirm Purchase</button>
                     <Link className='col-6 col-sm-3 ' to="/"><button onClick={postSubmit} className='w-100 bg-light border border-primary rounded text-primary'>Home</button></Link>
                 </div>
-
-                   
                 <h3 className='text-dark'>{orderResponse}</h3>
             </div>
         )

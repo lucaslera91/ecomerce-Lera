@@ -4,9 +4,8 @@ import { Link} from "react-router-dom";
 
 
 
-function Item({item, fn, text}) {
+function Item({item, text}) {
    
-
     return (
         <div className='col-4 m-2 text-dark' style={{minWidth: '300px', maxWidth: "400px"}}>
             <div className="container-fluid w-100 border-bottom border-dark p-1 bg-transparent">

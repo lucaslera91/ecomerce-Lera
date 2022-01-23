@@ -1,20 +1,19 @@
-import React, { useEffect} from "react";
+import React, {useEffect} from "react";
 import ItemList from './ItemList';
 import { ListConsumer } from '../context/ListProvider'
 import Carusell from './Carusell';
 
-export default function ItemListContainer({greeting, Children, fn, id}) {
+export default function ItemListContainer({greeting, Children, fn}) {
     const {list, getList} = ListConsumer();
 
-    //const [items, setItems] = useState([]);
     async function asignList(){
-       await getList()
+        await getList()
     }
 
-    useEffect(() => {
-        asignList()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-     }, [])
+  useEffect(() => {
+    asignList()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+   }, [])
 
     let containerHeight = "90vh"
 

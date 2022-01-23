@@ -12,7 +12,6 @@ export default function ItemDetailContainer({text}) {
         await getDetailId(idElement)
     }
 
-
     useEffect(() => {
         setElement()
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -21,6 +20,9 @@ export default function ItemDetailContainer({text}) {
     if(item.id !== undefined){
         return <ItemDetail text={text} item={item}></ItemDetail>;
     }else{
-        return <h3>Loading...</h3>
+        return (
+        <div className="spinner-border text-primary" role="status">
+            <span className="sr-only">Loading...</span>
+        </div>)
     }
 }

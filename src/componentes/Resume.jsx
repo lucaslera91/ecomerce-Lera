@@ -6,11 +6,10 @@ function Resume({items}) {
     const {setTotal} = CartConsumer();
 
     let total = 0
-    console.log(items)
     items.forEach(element => {
-        setTotal(total += element.cuantity * element.price)
+        total += element.cuantity * element.price
     });
-    //setTotal(total)
+    setTotal(total)
 
     if (items.length < 1){
         return <h3>No items in cart</h3>

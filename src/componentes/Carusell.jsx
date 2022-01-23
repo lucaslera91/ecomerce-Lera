@@ -2,7 +2,11 @@
 function Carusell({items}) {
     const url = 'https://media.istockphoto.com/vectors/blue-sky-and-clouds-seamless-vector-background-vector-id1163292935?k=20&m=1163292935&s=612x612&w=0&h=UkJc7uklb677HRh_Mn-5mrFM1cy4u8xJUxiYl4540eQ='
 if(items.length < 1){
-    return <h3>Loading...</h3>
+    return (
+      <div className="spinner-border text-primary" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    )
 }else{
  
     return(

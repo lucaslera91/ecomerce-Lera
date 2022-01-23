@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import CartItemList from '../componentes/CartItemList'
 import { CartConsumer } from '../context/CartProvider'
@@ -7,8 +7,7 @@ import Resume from './Resume';
 function CartView() {
 
     const {cart} = CartConsumer();
-    useEffect(() => {
-    }, [cart])
+ 
 
     if (cart.length < 1){
         return <div className='text-dark' style={{minHeight: '100vh'}}>

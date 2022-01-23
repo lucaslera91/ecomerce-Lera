@@ -3,8 +3,8 @@ import Footer from '../componentes/Footer';
 
 function FooterDisplay() {
   return <div>
-      <Footer></Footer>
+      <Footer/>
   </div>;
 }
 
-export default Footer;
+export default FooterDisplay;

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useMemo } from 'react'
 import {collection, doc, getDocs, getDoc, addDoc, where, query} from 'firebase/firestore'
 import db from '../service'
 
@@ -14,24 +14,20 @@ function ListProvider({children}) {
     const [item, setItem] = useState({})
     const [category, setCategory] = useState([])
     const [purchaseId, setPurchaseId] = useState('')
-   // const [add, setAdd] = useState({ 
-   //     buyer:{ 
-   //         name: '',
-   //         phone: '',
-   //         email: '' },
-   //     items: [{
-   //             id: '',
-   //             title: '',
-   //             price: 0 }],
-   //     date: 30/12/2021,
-   //     total: 0
-   // })
+
+    useMemo( () => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+            return getList()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        
+            // Sreact-hooks/exhaustive-deps
+
+    }, [] )
 
     function getList(){
         const itemRef = collection(db, 'items')
         getDocs(itemRef).then((snapshot)=>{
             const data = snapshot.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
-            console.log(data)
             setList(data)
          })
         }
@@ -46,12 +42,9 @@ function ListProvider({children}) {
         }
 
         function getCategory(value){
-            //console.log(value.toLowerCase())
             const itemRef = query(collection(db, 'items'), where('type', '==', value))
             getDocs(itemRef).then((snapshot)=>{
                 const data = snapshot.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
-                console.log(snapshot)
-                console.log(data)
                 setCategory(data)
              }) 
         }
@@ -60,23 +53,8 @@ function ListProvider({children}) {
             const col = collection(db, 'orders')
             const itemAdded = await addDoc(col, data)
             setPurchaseId(itemAdded.id)
-            console.log(itemAdded.id)
-            
         }
 
-        
-
-    
-    // useEffect(() => {
-    //     // getItems();
-    //     const itemRef = collection(db, 'items')
-    //     getDocs(itemRef).then((snapshot)=>{
-    //         const data = snapshot.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
-    //         console.log(data)
-    //         setList(data)
-    //      })
-    //  }, [])
-    
         return (
             <ListContext.Provider value={{list, item, purchaseId, setList, getList, setItem, getDetailId, category, getCategory, addItem, setPurchaseId}}>
               {children}
