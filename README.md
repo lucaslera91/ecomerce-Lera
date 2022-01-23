@@ -69,14 +69,44 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+Por favor seguir los pasos para poder correr el proyecto.
+1 - Clonar de git
 
+2- correr en terminal npm i
 
-Por ahi me falta experiencia en que debe decir el archivo Read Me.
+3- npm start
 
-Explico la pagina. 
+Tambien se puede ver el link:
+
+https://loving-bell-1718a8.netlify.app/
+
+Explicacion del flujo de la pagina. 
 
 CompuShop es el Brand -> al cual clickeas el nombre y es el 'Home'
 
-El Menu se abre y se puede elegir la categoria laptop o desktop
+- El Menu se abre y se puede elegir la categoria laptop o desktop.
+- Hay un carrusel para ver 3 imagenes. (elegi 3 podrian ser mas/menos y otras si asi se desea)
+- Luego se hace un una busqueda a fire base para que busque todos los items. se utiliza useMemo
+- Se puede buscar por categoria (se hace un fetch con filtro porque asi nos dijeron en clase)
+- se puede elegir el button + sube hasta q no hay mas stock. 
+- Luego si apretas "add to cart", indica que esta agregado y si si queres podes add more to cart.
+- Button "ver mas detalles" (tambien se hace un fetch para un id particular) se abre el detalle del producto:
 
-Si elegis mas detalles se abre el detalle del producto
+    - 4 imagenes para ver del producto
+    - Imagen principal
+    - Descripcion
+    - Precio
+    - Stock
+    
+- Mismos botones que en pagina principal y mismo funcionaminto (mismo componente)
+- Podes ir al cart a traves del button "Go to cart" o el Cart Widget
+ 
+- tenes un resumen primero con total y cantidad de items
+- button de check out
+- y resumen con un icono trash donde podes eleiminar el producto del cart
+- Check out:
+    - tenes el form con los campos nombre / phone / Email (campos no tiene validacion)
+    - tienen el resumen
+    - confirmar la orden (si valida si hay campos vacios)
+    - cuando se confirma la compra, retorna un codigo de confirmacion 
+
