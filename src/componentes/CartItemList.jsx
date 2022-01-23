@@ -7,11 +7,9 @@ function CartItemList({items}) {
     //show items and add total
     const {removeElement} = CartConsumer();
     
-
-    
     if(items.length > 0){
         return items.map((element) => 
-                 <div className='d-flex justify-content-center align-items-center col-11'>
+                 <div key={element.id} className='d-flex justify-content-center align-items-center col-11'>
                     <div className='d-flex justify-content-between col-md-9'>
                         <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
                         <div className='d-flex justify-content-center align-items-center col-3'>

@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { CartConsumer } from '../context/CartProvider'
 
 
 function Resume({items}) {
-    const {setTotal} = CartConsumer();
+    const {total, setTotal} = CartConsumer();
 
-    let total = 0
-    items.forEach(element => {
-        total += element.cuantity * element.price
-    });
-    setTotal(total)
+    useEffect(()=>{
+        setTotal((items.reduce((a,v) =>  a = a + (v.cuantity * v.price) , 0 )))
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
+
+    
 
     if (items.length < 1){
         return <h3>No items in cart</h3>

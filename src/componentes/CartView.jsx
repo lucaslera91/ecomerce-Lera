@@ -7,7 +7,7 @@ import Resume from './Resume';
 function CartView() {
 
     const {cart} = CartConsumer();
- 
+    
 
     if (cart.length < 1){
         return <div className='text-dark' style={{minHeight: '100vh'}}>
