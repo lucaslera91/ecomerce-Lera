@@ -10,7 +10,6 @@ function App() {
     <div className="App" style={{backgroundImage: `url(${url})`}}>
       <Ruta/>
     </div>
-
   );
 }
 
