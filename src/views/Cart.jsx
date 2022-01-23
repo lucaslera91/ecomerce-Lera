@@ -6,5 +6,5 @@ export default function Cart() {
         <div>
            <CartView></CartView>
         </div>
-    )
+        )
 }
