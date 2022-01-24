@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 import { Link} from "react-router-dom";
 
 function Item({item, text}) {
@@ -18,9 +17,7 @@ function Item({item, text}) {
                 <button className="bg-light w-75 border border-dark my-1 rounded text-dark" >Ver mas detalles!</button>
                 </Link>
             </div>
-            <div>
-                <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
-            </div>
+            
             <div className='text-dark'>
                Stock: {item.stock}
             </div>
