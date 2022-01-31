@@ -3,7 +3,7 @@ import React from 'react';
 import Ruta from './rutas/Ruta';
 function App() {
  
-  const url ='https://cutewallpaper.org/21/light-blue-plain-background/Details-about-3X5FT-Thin-Vinyl-Studio-Baby-Blue-Photography-Backdrop-Plain-Photo-Background.jpg'
+  const url ='https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/y-so-serious-white.png'
 
   return (
   

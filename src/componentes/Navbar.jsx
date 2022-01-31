@@ -6,8 +6,8 @@ const NavBar = () => {
 
     const {cart} = CartConsumer();
 
-    const active =   "d-flex justify-content-start text-decoration-none p-3 text-decoration-none text-light"
-    const inactive = "d-flex justify-content-start text-decoration-none p-3 text-decoration-none text-secondary"
+    const active =   "d-flex justify-content-start text-decoration-none  text-decoration-none text-light"
+    const inactive = "d-flex justify-content-start text-decoration-none  text-decoration-none text-secondary"
 
     return (
                 <nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">

@@ -13,10 +13,10 @@ export default function ItemDetail({ item, text }) {
             <div className='container-fluid border-dark rounded w-100 h-100vh'>
                 <div className='col-12 d-flex flex-column align-items-center' style={{ minHeight: '90vh' }}>
                     <div className='d-flex justify-content-center' style={{maxWidth: "80px", maxHeight: "80px"}}>
-                        <img className='img-fluid border border-2 border-dark rounded m-2' onClick={()=>{setImg(item.picture)}} style={{ maxSize: '30px' }} src={item.picture} alt="" />
-                        <img className='img-fluid border border-2 border-dark rounded m-2' onClick={()=>{setImg(item.picture1)}} style={{ maxSize: '30px' }} src={item.picture1} alt="" />
-                        <img className='img-fluid border border-2 border-dark rounded m-2' onClick={()=>{setImg(item.picture2)}} style={{ maxSize: '30px' }} src={item.picture2} alt="" />
-                        <img className='img-fluid border border-2 border-dark rounded m-2' onClick={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
+                        <img className='img-fluid border border-2 border-dark rounded m-2' onMouseEnter={()=>{setImg(item.picture)}} style={{ maxSize: '30px' }} src={item.picture} alt="" />
+                        <img className='img-fluid border border-2 border-dark rounded m-2' onMouseEnter={()=>{setImg(item.picture1)}} style={{ maxSize: '30px' }} src={item.picture1} alt="" />
+                        <img className='img-fluid border border-2 border-dark rounded m-2' onMouseEnter={()=>{setImg(item.picture2)}} style={{ maxSize: '30px' }} src={item.picture2} alt="" />
+                        <img className='img-fluid border border-2 border-dark rounded m-2' onMouseEnter={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
                     </div>
                     
                     <div className='col-10 d-flex flex-column justify-content-center align-items-center'>
