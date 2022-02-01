@@ -9,7 +9,7 @@ function Courtain() {
   const Bounce = styled.div`animation: 3s ${keyframes`${bounce}`}`
   
   const [classAux, setClassAux] = useState(<div className='d-flex flex-column aling items center' >
-                                            <NavLink to={'/computers'} className='text-decoration-none text-dark w-100' style={{backgroundImage: `url(${url})`,height: '200vh',position: 'absolute', opacity: 0.94, zIndex:3}}>
+                                            <NavLink to={'/'} className='text-decoration-none text-dark w-100' style={{backgroundImage: `url(${url})`,height: '200vh',position: 'absolute', opacity: 0.94, zIndex:3}}>
                                                     <Bounce className='d-flex justify-content-center w-100' style={{position: 'absolute', top: '20%'}}><h1 >Bienvenido a la mejor tienda de computadoras</h1></Bounce>
                                             </NavLink>  
                                             </div>)

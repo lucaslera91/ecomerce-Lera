@@ -15,17 +15,17 @@ const NavBar = () => {
                 
                 <div className="col-sm-10 px-3 d-flex align-items-center justify-content-start">
                     <div className="col-sm-10 px-3 d-flex align-items-center justify-content-start">
-                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to='/computers'>
+                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to='/'>
                             <h3>CompuShop</h3>
                         </NavLink>
                     
                     </div>
 
-                    <Link className='text-decoration-none col-6 col-sm-3' style={{borderRadius: '2rem'}} to="/computers/cart">
+                    <Link className='text-decoration-none col-6 col-sm-3' style={{borderRadius: '2rem'}} to="/cart">
                         <div className='bg-light mx-auto border border-primary rounded-xl text-primary p-0' style={{ borderRadius: '2rem'}}>Go to cart!</div>
                     </Link>
                     <div className="col-sm-1 p-1">
-                        <NavLink  className={({ isActive }) => (isActive ? active : inactive)} to='/computers/cart'>
+                        <NavLink  className={({ isActive }) => (isActive ? active : inactive)} to='/cart'>
                             <CartWidget className="text-decoration-none" color="light" /> {cart.length}
                         </NavLink>
                     </div>
@@ -43,10 +43,10 @@ const NavBar = () => {
                 
                 <ul className="nav navbar-nav">
                     <li>
-                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/computers/category/laptop">Laptop</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/category/laptop">Laptop</NavLink>
                     </li>
                     <li>                        
-                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/computers/category/desktop">Desktop</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/category/desktop">Desktop</NavLink>
                     </li>
                 </ul>
                 </div>
