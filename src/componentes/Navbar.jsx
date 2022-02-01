@@ -14,14 +14,14 @@ const NavBar = () => {
                 <nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">
                 
                 <div className="col-sm-10 px-3 d-flex align-items-center justify-content-start">
-                    <div className="col-sm-10 px-3 d-flex align-items-center justify-content-start">
+                    <div className="col-sm-9 px-3 d-flex align-items-center justify-content-start">
                         <NavLink className={({ isActive }) => (isActive ? active : inactive)} to='/'>
                             <h3>CompuShop</h3>
                         </NavLink>
                     
                     </div>
 
-                    <Link className='text-decoration-none col-6 col-sm-3' style={{borderRadius: '2rem'}} to="/cart">
+                    <Link className='text-decoration-none col-4 col-sm-2' style={{borderRadius: '2rem'}} to="/cart">
                         <div className='bg-light mx-auto border border-primary rounded-xl text-primary p-0' style={{ borderRadius: '2rem'}}>Go to cart!</div>
                     </Link>
                     <div className="col-sm-1 p-1">
