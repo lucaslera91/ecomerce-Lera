@@ -8,8 +8,8 @@ import Category from '../views/Category'
 import CartProvider from '../context/CartProvider'
 import ListProvider from '../context/ListProvider'
 import CheckOut from '../views/CheckOut'
-import FooterDisplay from '../views/FooterDisplay'
 import Layout from '../rutas/Layout'
+import Inicio from '../views/Inicio'
 
 export default function Ruta() {
     return (
@@ -19,15 +19,15 @@ export default function Ruta() {
                     <ListProvider>
                         <Routes>
                             <Route path="/" element={<Layout/>}>
-                            <Route path='/' element={<Home/>}/>
-                            <Route path='/cart' element={<Cart/>}/>
-                            <Route path='/checkout' element={<CheckOut/>}/>
-                            <Route path='/detail/:idElement' element={<Detail/>}/>
-                            <Route path='/category/:idCategory' element={<Category/>}/>
+                                <Route path='/' element={<Home/>}/>
+                                <Route path='/cart' element={<Cart/>}/>
+                                <Route path='/checkout' element={<CheckOut/>}/>
+                                <Route path='/detail/:idElement' element={<Detail/>}/>
+                                <Route path='/category/:idCategory' element={<Category/>}/>
                             </Route>
+                            <Route path='/inicio' element={<Inicio/>}/>
                             <Route path='*' element={<Error/>}/>
                         </Routes>
-                        <FooterDisplay/>
                     </ListProvider>
                 </CartProvider>
             </BrowserRouter>
