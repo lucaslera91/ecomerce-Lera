@@ -16,7 +16,7 @@ function Item({item, text}) {
         <div className='col-4 m-2 text-dark' style={{minWidth: '300px', maxWidth: "400px"}}>
             <div className="container-fluid w-100 border-bottom border-dark p-1 bg-light shadow rounded-xl" style={{borderRadius: '2rem'}}>
             <div className='w-100 py-1'>
-                <h3 className='d-flex justify-content-center align-items-center text-dark' style={{height: 60}}>{item.title}</h3>
+                <h4 className='d-flex justify-content-center align-items-center text-dark' style={{height: 60}}>{item.title}</h4>
             </div>
             <div className='w-100 py-1'>
                 <Link to={`/computers/detail/${item.id}`}>
