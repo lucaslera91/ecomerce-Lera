@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link} from "react-router-dom";
 import {formatNumber} from "../helper"
+import ButtonCounter from './ButtonCounter';
+import ItemListContainer from './ItemListContainer';
 
 function Item({item, text}) {
    
@@ -29,11 +31,12 @@ function Item({item, text}) {
                 </Link>
             </div>
             
-            <div className='text-dark'>
-               Stock: {item.stock}
-            </div>
+            
             <div className='text-dark'>
                Precio: $ {formatNumber(item.price)}
+            </div>
+            <div className='text-dark'>
+                <ButtonCounter start={1} stock={item.stock} item={item}></ButtonCounter>
             </div>
         </div>
         </div>
