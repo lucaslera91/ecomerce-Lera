@@ -21,15 +21,16 @@ if(items.length < 1){
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              <div className="carousel-item active" >
+                <Link to={`/`}><img className="d-block w-100" style={{ backgroundColor: '#93BCFE', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '250px'}} src='https://www.babacomputers.com/wp-content/uploads/2015/03/inner-desktop-banner.jpg' alt="Third slide"/></Link>
+              </div>
+              <div className="carousel-item">
                 <Link to={`/computers/detail/${items[0].id}`}><img className="d-block w-100" style={{ backgroundColor: '#FFFBA2', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '250px'}} src={items[7].picture} alt="First slide"/></Link>
               </div>
               <div className="carousel-item">
                 <Link to={`/computers/detail/${items[5].id}`}><img className="d-block w-100" style={{ backgroundColor:'#FBAD8B', borderRadius: '2rem',  objectFit: 'contain', overflow:'hidden', height: '250px'}} src={items[1].picture1} alt="Second slide"/></Link>
               </div>
-              <div className="carousel-item" >
-                <Link to={`/`}><img className="d-block w-100" style={{ backgroundColor: '#93BCFE', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '250px'}} src='https://www.babacomputers.com/wp-content/uploads/2015/03/inner-desktop-banner.jpg' alt="Third slide"/></Link>
-              </div>
+              
             </div>
             <a className="carousel-control-prev text-decoration-none" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <i className="fas fa-angle-double-left fa-3x text-dark"></i>
