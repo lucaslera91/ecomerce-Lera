@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link} from "react-router-dom";
+import {formatNumber} from "../helper"
 
 function Item({item, text}) {
    
@@ -20,6 +21,9 @@ function Item({item, text}) {
             
             <div className='text-dark'>
                Stock: {item.stock}
+            </div>
+            <div className='text-dark'>
+               Precio: $ {formatNumber(item.price)}
             </div>
         </div>
         </div>

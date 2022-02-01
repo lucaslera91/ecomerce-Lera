@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ItemCount from './ItemCount'
+import {formatNumber} from '../helper'
 
 export default function ItemDetail({ item, text }) {
     const [bigImg, setImg] = useState('')
@@ -33,7 +34,7 @@ export default function ItemDetail({ item, text }) {
                         <div>
                             
                             <div >
-                                <h3 className="font-weight-bold">${item.price}</h3>
+                                <h3 className="font-weight-bold">$ {formatNumber(item.price)}</h3>
                             </div>
                         </div>
                         <div className='w-100 d-flex justify-content-center flex-column my-3'>

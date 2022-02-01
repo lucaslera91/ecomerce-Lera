@@ -14,6 +14,10 @@ export function checkIfEmpty(form){
         return false
     }
 }
+export function formatNumber(number){
+
+    return new Intl.NumberFormat( "Es-ES" ).format(number)
+}
 
 
 
