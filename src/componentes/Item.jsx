@@ -21,12 +21,12 @@ function Item({item, text}) {
                 <h4 className='d-flex justify-content-center align-items-center text-dark' style={{height: 60}}>{item.title}</h4>
             </div>
             <div className='w-100 py-1'>
-                <Link to={`/computers/detail/${item.id}`}>
+                <Link to={`/detail/${item.id}`}>
                     <img className="img-fluid img-thumbnail rounded border border-muted" style={{height: 200}} src={item.picture} alt=''/>
                 </Link>
             </div>
             <div>
-                <Link to={`/computers/detail/${item.id}`}>
+                <Link to={`/detail/${item.id}`}>
                 <button className="bg-light w-75 border border-muted my-1 rounded-lg text-dark" style={{borderRadius: '2rem'}} >Ver mas detalles!</button>
                 </Link>
             </div>
