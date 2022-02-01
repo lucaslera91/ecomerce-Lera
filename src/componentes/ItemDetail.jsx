@@ -20,21 +20,23 @@ export default function ItemDetail({ item, text }) {
                         <img className='img-fluid border border-2 border-dark rounded m-2' onMouseEnter={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
                     </div>
                     
-                    <div className='col-10 d-flex flex-column justify-content-center align-items-center'>
-                        <img className='img-fluid' src={bigImg} alt="" />
-                        <div className='py-3'>
+                    <div className='col-10 d-flex flex-column justify-content-center align-items-center bg-light shadow rounded-xl' style={{borderRadius: '2rem'}}>
+                        <div>
+                            <img style={{height: '450px', objectFit: 'contain'}} className='img-fluid' src={bigImg} alt="" />
+                        </div>
+                        <div style={{height: '100px'}}className='py-4'>
                             <h5>{item.descripcion}</h5>
                         </div>
                     </div>
 
-                    <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column'>
+                    <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column py-5'>
                         <div>
                             <h3>{item.title}</h3>
                         </div>
                         <div>
                             
                             <div >
-                                <h3 className="font-weight-bold">$ {formatNumber(item.price)}</h3>
+                                <h3 className="font-weight-bold">{formatNumber(item.price)}</h3>
                             </div>
                         </div>
                         <div className='w-100 d-flex justify-content-center flex-column my-3'>
