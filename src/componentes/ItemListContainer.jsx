@@ -22,7 +22,7 @@ export default function ItemListContainer({greeting, Children, fn}) {
 
     return (
         <div>
-            <h3 className='my-2'>Special offers</h3>
+            <h3 className='my-2'>Ofertas Especiales!</h3>
             <Carusell items={list}></Carusell>
             <div className="bg-transparent text-dark d-flex flex-column align-content-center justify-content-start" style={{minHeight:  containerHeight}}>
                 <h2>{greeting}</h2>

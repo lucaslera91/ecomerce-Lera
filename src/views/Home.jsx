@@ -5,7 +5,7 @@ export default function Home() {
 
     return (
         <div>
-            <ItemListContainer text={'dark'} greeting={`Welcome to the best computer shop!`}>
+            <ItemListContainer text={'dark'} greeting={`Bienvenido a la mejor tienda de computadoras!`}>
             </ItemListContainer>
         </div>
     )
