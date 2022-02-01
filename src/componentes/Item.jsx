@@ -27,7 +27,7 @@ function Item({item, text}) {
             </div>
             <div>
                 <Link to={`/computers/detail/${item.id}`}>
-                <button className="bg-light w-75 border border-muted my-1 rounded text-dark" >Ver mas detalles!</button>
+                <button className="bg-light w-75 border border-muted my-1 rounded-lg text-dark" style={{borderRadius: '2rem'}} >Ver mas detalles!</button>
                 </Link>
             </div>
             
