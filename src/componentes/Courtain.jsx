@@ -7,7 +7,7 @@ function Courtain() {
 
 
   return (
-    <NavLink to={'/'} className='text-decoration-none text-dark d-flex justify-content-center align-items-center' 
+    <NavLink to={'/computers'} className='text-decoration-none text-dark d-flex justify-content-center align-items-center' 
         style={{backgroundImage: `url(${url})`, minHeight: '120vh'}}>
             <h1>Bienvenido a la mejor tienda de computadoras</h1>
         

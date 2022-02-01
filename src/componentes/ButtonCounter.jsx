@@ -54,7 +54,7 @@ function ButtonCounter({start, stock, item}) {
             </div>
             <div><button onClick={handleAddMore} className={classAddMore}>Add more to cart</button></div>
             <div className={resultadoClass}>Product added to cart!</div>
-            <Link className='text-decoration-none w-75' to="/cart"><div className='bg-light w-75 mx-auto border border-primary rounded text-primary p-0" '>Go to cart!</div></Link>
+            <Link className='text-decoration-none w-75' to="/computers/cart"><div className='bg-light w-75 mx-auto border border-primary rounded text-primary p-0" '>Go to cart!</div></Link>
         </div>);
       
 }

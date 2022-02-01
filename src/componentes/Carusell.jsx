@@ -22,13 +22,13 @@ if(items.length < 1){
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <Link to={`/detail/${items[0].id}`}><img className="d-block w-100" style={{objectFit: 'contain', overflow:'hidden',height: '250px'}} src={items[7].picture} alt="First slide"/></Link>
+                <Link to={`/computers/detail/${items[0].id}`}><img className="d-block w-100" style={{objectFit: 'contain', overflow:'hidden',height: '250px'}} src={items[7].picture} alt="First slide"/></Link>
               </div>
               <div className="carousel-item">
-                <Link to={`/detail/${items[5].id}`}><img className="d-block w-100" style={{ objectFit: 'contain', overflow:'hidden', height: '250px'}} src={items[1].picture1} alt="Second slide"/></Link>
+                <Link to={`/computers/detail/${items[5].id}`}><img className="d-block w-100" style={{ objectFit: 'contain', overflow:'hidden', height: '250px'}} src={items[1].picture1} alt="Second slide"/></Link>
               </div>
               <div className="carousel-item" >
-                <Link to={`/detail/${items[7].id}`}><img className="d-block w-100" style={{objectFit: 'contain', overflow:'hidden',height: '250px'}} src={items[6].picture2} alt="Third slide"/></Link>
+                <Link to={`/computers/detail/${items[7].id}`}><img className="d-block w-100" style={{objectFit: 'contain', overflow:'hidden',height: '250px'}} src={items[6].picture2} alt="Third slide"/></Link>
               </div>
             </div>
             <a className="carousel-control-prev text-decoration-none" href="#carouselExampleIndicators" role="button" data-slide="prev">

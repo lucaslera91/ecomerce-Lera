@@ -14,7 +14,7 @@ function Item({item, text}) {
                 <img className="img-fluid img-thumbnail rounded border border-dark" style={{height: 200}} src={item.picture} alt=''/>
             </div>
             <div>
-                <Link to={`/detail/${item.id}`}>
+                <Link to={`/computers/detail/${item.id}`}>
                 <button className="bg-light w-75 border border-dark my-1 rounded text-dark" >Ver mas detalles!</button>
                 </Link>
             </div>

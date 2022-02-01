@@ -12,9 +12,9 @@ const NavBar = () => {
     return (
                 <nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">
                 
-                <div className="col-sm-10 px-3 d-flex justify-content-start"><NavLink className={({ isActive }) => (isActive ? active : inactive)} to='/'><h3>CompuShop</h3></NavLink></div>
+                <div className="col-sm-10 px-3 d-flex justify-content-start"><NavLink className={({ isActive }) => (isActive ? active : inactive)} to='/computers'><h3>CompuShop</h3></NavLink></div>
                 
-                <div className="col-sm-1 p-1"><NavLink  className={({ isActive }) => (isActive ? active : inactive)} to='/cart'><CartWidget className="text-decoration-none" color="light" />{cart.length}</NavLink></div>
+                <div className="col-sm-1 p-1"><NavLink  className={({ isActive }) => (isActive ? active : inactive)} to='/computers/cart'><CartWidget className="text-decoration-none" color="light" />{cart.length}</NavLink></div>
                 
                 <div className="col-sm-1 ">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
@@ -27,10 +27,10 @@ const NavBar = () => {
                 
                 <ul className="nav navbar-nav">
                     <li>
-                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/category/laptop">Laptop</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/computers/category/laptop">Laptop</NavLink>
                     </li>
                     <li>                        
-                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/category/desktop">Desktop</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/computers/category/desktop">Desktop</NavLink>
                     </li>
                 </ul>
                 </div>
