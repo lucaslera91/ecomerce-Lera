@@ -18,12 +18,12 @@ export default function Ruta() {
                 <CartProvider>
                     <ListProvider>
                         <Routes>
-                            <Route path="/computers" element={<Layout/>}>
-                                <Route path='/computers' element={<Home/>}/>
-                                <Route path='/computers/cart' element={<Cart/>}/>
-                                <Route path='/computers/checkout' element={<CheckOut/>}/>
-                                <Route path='/computers/detail/:idElement' element={<Detail/>}/>
-                                <Route path='/computers/category/:idCategory' element={<Category/>}/>
+                            <Route path="/" element={<Layout/>}>
+                                <Route path='/' element={<Home/>}/>
+                                <Route path='/cart' element={<Cart/>}/>
+                                <Route path='/checkout' element={<CheckOut/>}/>
+                                <Route path='/detail/:idElement' element={<Detail/>}/>
+                                <Route path='/category/:idCategory' element={<Category/>}/>
                             </Route>
                             <Route path='/' element={<Inicio/>}/>
                             <Route path='*' element={<Error/>}/>
