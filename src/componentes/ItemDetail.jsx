@@ -14,7 +14,7 @@ export default function ItemDetail({ item, text }) {
             <div className='container-fluid border-dark rounded w-100 h-100vh'>
                 <div className='col-12 d-flex flex-column align-items-center' style={{ minHeight: '90vh' }}>
                     
-                        <div className='fs-2 text fw-light'>
+                        <div className='fs-2 text fw-normal'>
                             <p>{item.title}</p>
                         </div>
                     
