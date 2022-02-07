@@ -22,7 +22,7 @@ if(items.length < 1){
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active" >
-                <Link to={`/`}><img className="d-block w-100" style={{ backgroundColor: '', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '150px'}} src='https://www.babacomputers.com/wp-content/uploads/2015/03/inner-desktop-banner.jpg' alt="Third slide"/></Link>
+                <Link to={`/`}><img className="d-block w-100" style={{ backgroundColor: '', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '150px'}} src='https://edsi.al/wp-content/uploads/2020/05/New-Refurbished-Banner.jpg' alt="Third slide"/></Link>
               </div>
               <div className="carousel-item">
                 <Link to={`/detail/${items[0].id}`}><img className="d-block w-100" style={{ backgroundColor: '', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '150px'}} src={items[7].picture} alt="First slide"/></Link>
