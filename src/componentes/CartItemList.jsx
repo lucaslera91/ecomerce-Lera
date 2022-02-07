@@ -11,7 +11,7 @@ function CartItemList({items}) {
                     <div className='d-flex justify-content-between col-md-9'>
                         
                         <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
-                        <div className='d-flex justify-content-center align-items-center col-3'>
+                        <div className='d-flex justify-content-center align-items-center'>
                             <i onClick={()=>removeElement( element.id)} className="far fa-trash-alt fa-2x "></i> 
                         </div>
                     </div>

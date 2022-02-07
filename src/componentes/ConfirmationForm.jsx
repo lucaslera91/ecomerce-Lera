@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import Resume from './Resume'
 import { CartConsumer } from '../context/CartProvider'
 import { ListConsumer } from '../context/ListProvider'
-import {checkIfEmpty} from '../helper'
+import {checkIfEmpty,phonenumber, check, validateEmail} from '../helper'
 import Swal from 'sweetalert2'
+import InputStatus from './InputStatus'
 
 
 function ConfirmationForm() {
@@ -20,33 +21,70 @@ function ConfirmationForm() {
          date: Date().toString(),
          total: total
     })
-    
-    async function submitHandle(){
+    const [formInput, setFormInput] = useState({
+     
+        nameError: 'Nombre no puede estar vacio',
+        phoneError: 'Colocar numero correcto',
+        emailError: 'Colocar correo valido'
+    })
+
+    const validate = () => {
+        
+       
+        return true  
+    }
+
+
+   
+    //const [validationEmail, setValidationEmail] = useState('form-control')
+    async function submitHandle(event){
+        event.preventDefault()
+     
         console.log(form)
-        //validate form
-        if (checkIfEmpty(form)){
+        const {buyer: {email, phone}} = form
+        
+        if (form.buyer.name < 1 || form.buyer.phone.length < 10 || !validateEmail(form.buyer.email)){
             Swal.fire({
                 icon: 'warning',
                 title: 'Oops...',
-                text: 'Please fill all the fields',
+                text: 'Por favor revisar datos',
             })
+           
         }else{
-            addItem(form)
+            await addItem(form)
 
             Swal.fire({
                 icon: 'success',
-                title: 'Your purchase was succesfull',
+                title: 'Se realizo la compra exitosamente!',
                 showConfirmButton: false,
                 timer: 1500
             })
             setForm({...form, buyer: {...form.buyer,  name: '', phone: '', email: '' } } )
             setCart([])
-         }
+        }  
+           
     }
-
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  
+    // Loop over them and prevent submission
+   
     function handleForm(e){
+
         const {name, value} = e.target
-        setForm({...form, buyer: {...form.buyer, [name]: value} } )
+        //alert(name)
+        if(name === 'phone'){
+           
+           if (phonenumber(value)){
+            setForm({...form, buyer: {...form.buyer, [name]: value} } )
+            console.log(form)
+           }
+        }else{
+            setForm({...form, buyer: {...form.buyer, [name]: value} } )
+
+        }
+        
         console.log(form)
     }
 
@@ -63,30 +101,61 @@ function ConfirmationForm() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [purchaseId])
 
+  
+
         return (
             <div className='d-flex flex-column align-items-center'>
-                <div className='d-flex justify-content-center p-0 w-100'>
+                <div className='w-100'>
                     <div className='row p-0 m-0 w-100 justify-content-center'>
                         <div className=' col-sm-5 col-11 text-dark d-flex flex-column p-0'>
-                            <form className='d-flex flex-column'>
-                                <input onChange={(e) => handleForm(e) } value={form.buyer.name} className='my-2 py-1 rounded' name='name' type="text" placeholder='Name' />
-                                <input onChange={(e) => handleForm(e) } value={form.buyer.phone} className='my-2 py-1 rounded' name='phone' type="text" placeholder='Phone'/>
-                                <input onChange={(e) => handleForm(e) } value={form.buyer.email} className='my-2 py-1 rounded'  name='email' type="text" placeholder='E-mail'/> 
+                            <form className="d-flex flex-column">
+                                    <input
+                                        onChange={(e) => handleForm(e) }
+                                        value={form.buyer.name} 
+                                        className='my-2 py-1 rounded' 
+                                        name='name' type="text" 
+                                        placeholder='Name' />
+                                        {!form.buyer.name ? (
+                                        <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.nameError}</div>)
+                                    : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
+                                    <input
+                                        onChange={(e) => handleForm(e) }
+                                        value={form.buyer.phone}
+                                        className='my-2 py-1 rounded'
+                                        name='phone' type="text"
+                                        placeholder='Phone'/>
+                                        {form.buyer.phone.length < 10 ? (
+                                        <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.phoneError}</div>)
+                                    : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
+
+
+                                    <input
+                                        onChange={(e) => handleForm(e) }
+                                        value={form.buyer.email}
+                                        className='my-2 py-1 rounded'
+                                        name='email' type="email"
+                                        placeholder='E-mail'/> 
+                                        {!validateEmail(form.buyer.email) ? (
+                                            <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.emailError}</div>)
+                                        : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
+
                             </form>
-                        </div>
-                        <div className='col-sm-5 col-11 text-dark d-flex align-items-center justify-content-center'>
-                            <Resume items={cart}></Resume>
+
+                            <div className='col-sm-12 text-dark d-flex my-3 align-items-center justify-content-center'>
+                                <Resume items={cart}></Resume>
+                            </div>
                         </div>
                     </div>
+                    <div className='d-flex flex-column align-items-center my-1 w-100'>
+                        <button className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2' onClick={(e) => submitHandle(e)}>Confirm Purchase</button>
+                        <Link className='col-6 col-sm-3 ' to="/"><button onClick={postSubmit} className='w-100 bg-light border border-primary rounded text-primary'>Home</button></Link>
+                    </div>
+                    <h3 className='py-3 text-dark'>{orderResponse}</h3>
                 </div>
-                <div className='d-flex flex-column align-items-center w-100'>
-                    <button className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2' onClick={submitHandle}>Confirm Purchase</button>
-                    <Link className='col-6 col-sm-3 ' to="/"><button onClick={postSubmit} className='w-100 bg-light border border-primary rounded text-primary'>Home</button></Link>
-                </div>
-                <h3 className='text-dark'>{orderResponse}</h3>
-            </div>
-        )
+                </div>)
+
 }
 
 
-export default ConfirmationForm
+
+            export default ConfirmationForm

@@ -8,7 +8,7 @@ import Inicio from '../views/Inicio';
 function Layout() {
   return (
         <div>
-            <Inicio/>
+            
             <NavBar/>
             <Outlet/>
             <FooterDisplay/>

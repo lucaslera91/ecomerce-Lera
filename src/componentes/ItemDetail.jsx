@@ -22,7 +22,7 @@ export default function ItemDetail({ item, text }) {
                     
                     <div className='col-10 d-flex flex-column justify-content-center align-items-center bg-light shadow rounded-xl' style={{borderRadius: '2rem'}}>
                         <div>
-                            <img style={{height: '450px', objectFit: 'contain'}} className='img-fluid' src={bigImg} alt="" />
+                            <img style={{height: '375px', objectFit: 'contain'}} className='img-fluid' src={bigImg} alt="" />
                         </div>
                         <div style={{height: '100px'}}className='py-4'>
                             <h5>{item.descripcion}</h5>
@@ -36,7 +36,7 @@ export default function ItemDetail({ item, text }) {
                         <div>
                             
                             <div >
-                                <h3 className="font-weight-bold">{formatNumber(item.price)}</h3>
+                                <h3 className="font-weight-bold">$ {formatNumber(item.price)}</h3>
                             </div>
                         </div>
                         <div className='w-100 d-flex justify-content-center flex-column my-3'>

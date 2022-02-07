@@ -4,14 +4,14 @@ import { CartConsumer } from '../context/CartProvider'
 
 
 const NavBar = () => {
-
     const {cart} = CartConsumer();
+    console.log(cart)
 
     const active =   "d-flex justify-content-start col-8  text-decoration-none px-2 text-decoration-none text-light"
     const inactive = "d-flex justify-content-start col-8  text-decoration-none px-2 text-decoration-none text-secondary"
 
     return (
-                <nav id="navBar" className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden">
+                <nav id="navBar" style={{top: 0, position: 'fixed', zIndex: 1}} className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden w-100">
                 
                 <div className="col-sm-10 px-3 d-flex align-items-center justify-content-start">
                     <div className="col-sm-9 px-3 d-flex align-items-center justify-content-start">

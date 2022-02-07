@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { CartConsumer } from '../context/CartProvider'
-
+import {formatNumber} from "../helper"
 
 function Resume({items}) {
     const {cart, total, setTotal} = CartConsumer();
@@ -15,8 +15,8 @@ function Resume({items}) {
     }else{
         return (
             <div className=''>
-                <h3>Total: {total}</h3>
-                <h5>Items: {items.length}</h5>
+                <h3>Total: $ {formatNumber(total)}</h3>
+                <h5>Items: {formatNumber(items.length)}</h5>
             </div>
         )
     }

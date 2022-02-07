@@ -13,7 +13,7 @@ if(items.length < 1){
 }else{
  
     return(
-        <div className="border-1 border border-muted m-3 p-3 shadow bg-light rounded-xl" style={{ borderRadius: '2rem'}}>
+        <div className="border-1 border border-muted m-3 my-4 p-3 shadow bg-light rounded-xl" style={{ borderRadius: '2rem'}}>
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>

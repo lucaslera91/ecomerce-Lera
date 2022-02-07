@@ -25,7 +25,7 @@ export default function Ruta() {
                                 <Route path='/detail/:idElement' element={<Detail/>}/>
                                 <Route path='/category/:idCategory' element={<Category/>}/>
                             </Route>
-                            <Route path='/' element={<Inicio/>}/>
+                            
                             <Route path='*' element={<Error/>}/>
                         </Routes>
                     </ListProvider>
