@@ -31,7 +31,7 @@ export default function ItemDetail({ item, text }) {
                         <img className='img-fluid border border border-secondary rounded m-2' onMouseEnter={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
                     </div>
 
-                    <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column py-5'>
+                    <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column py-2'>
                         <div>
                             <h3>{item.title}</h3>
                         </div>
