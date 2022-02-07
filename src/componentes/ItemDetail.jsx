@@ -14,6 +14,9 @@ export default function ItemDetail({ item, text }) {
             <div className='container-fluid border-dark rounded w-100 h-100vh'>
                 <div className='col-12 d-flex flex-column align-items-center' style={{ minHeight: '90vh' }}>
                     
+                        <div className='py-1'>
+                            <h3>{item.title}</h3>
+                        </div>
                     
                     <div className='col-10 d-flex flex-column justify-content-center align-items-center bg-light shadow rounded-xl' style={{borderRadius: '2rem'}}>
                         <div>
@@ -32,13 +35,11 @@ export default function ItemDetail({ item, text }) {
                     </div>
 
                     <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column py-2'>
-                        <div>
-                            <h3>{item.title}</h3>
-                        </div>
+                        
                         <div>
                             
                             <div >
-                                <h3 className="font-weight-bold">$ {formatNumber(item.price)}</h3>
+                                <h3 className="font-weight-bold">Precio: $ {formatNumber(item.price)}</h3>
                             </div>
                         </div>
                         <div className='w-100 d-flex justify-content-center flex-column my-3'>
