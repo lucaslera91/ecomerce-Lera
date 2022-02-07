@@ -22,9 +22,7 @@ export default function ItemDetail({ item, text }) {
                         <div>
                             <img style={{height: '375px', objectFit: 'contain'}} className='img-fluid' src={bigImg} alt="" />
                         </div>
-                        <div style={{height: '100px'}}className='py-4'>
-                            <p className='text-secondary'><small>{item.descripcion}</small></p>
-                        </div>
+                        
                     </div>
 
                     <div className='d-flex justify-content-center my-3' style={{maxWidth: "80px", maxHeight: "80px"}}>
@@ -35,15 +33,16 @@ export default function ItemDetail({ item, text }) {
                     </div>
 
                     <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column py-2'>
-                        
+                        <div className='py-1'>
+                            <p className='text-secondary'><small>{item.descripcion}</small></p>
+                        </div>
                         <div>
-                            
                             <div >
-                                <h3 className="font-weight-bold">Precio: $ {formatNumber(item.price)}</h3>
+                                <h5 className="font-weight-bold">Precio: $ {formatNumber(item.price)}</h5>
                             </div>
                         </div>
-                        <div className='w-100 d-flex justify-content-center flex-column my-3'>
-                            <h3>Stock: {item.stock}</h3>
+                        <div className='w-100 d-flex justify-content-center flex-column my-2'>
+                            <p>Stock: {item.stock}</p>
                             <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
                         </div>
                     </div>
