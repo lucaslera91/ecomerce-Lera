@@ -26,10 +26,10 @@ export default function ItemDetail({ item, text }) {
                     </div>
 
                     <div className='d-flex justify-content-center my-3' style={{maxWidth: "80px", maxHeight: "80px"}}>
-                        <img className='img-fluid border border border-secondary rounded m-2' onMouseEnter={()=>{setImg(item.picture)}} style={{ maxSize: '30px' }} src={item.picture} alt="" />
-                        <img className='img-fluid border border border-secondary rounded m-2' onMouseEnter={()=>{setImg(item.picture1)}} style={{ maxSize: '30px' }} src={item.picture1} alt="" />
-                        <img className='img-fluid border border border-secondary rounded m-2' onMouseEnter={()=>{setImg(item.picture2)}} style={{ maxSize: '30px' }} src={item.picture2} alt="" />
-                        <img className='img-fluid border border border-secondary rounded m-2' onMouseEnter={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
+                        <img className='img-fluid border border border-muted shadow rounded m-2' onMouseEnter={()=>{setImg(item.picture)}} style={{ maxSize: '30px' }} src={item.picture} alt="" />
+                        <img className='img-fluid border border border-muted shadow rounded m-2' onMouseEnter={()=>{setImg(item.picture1)}} style={{ maxSize: '30px' }} src={item.picture1} alt="" />
+                        <img className='img-fluid border border border-muted shadow rounded m-2' onMouseEnter={()=>{setImg(item.picture2)}} style={{ maxSize: '30px' }} src={item.picture2} alt="" />
+                        <img className='img-fluid border border border-muted shadow rounded m-2' onMouseEnter={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
                     </div>
 
                     <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column py-2'>
