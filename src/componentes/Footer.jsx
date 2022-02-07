@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-      <div>
+      <div className='py-5'>
         <footer className="page-footer font-small cyan darken-3" >
           <div className="container" style={{height: '50px'}}>
             <div className="row" style={{height: '50px'}}>
@@ -30,7 +30,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="footer-copyright text-center p-3 text-dark">© 2020 Copyright:
+          <div className="footer-copyright text-center p-2 text-dark">© 2020 Copyright:
             MDBootstrap.com
           </div>
         </footer>
