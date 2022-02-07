@@ -14,8 +14,8 @@ export default function ItemDetail({ item, text }) {
             <div className='container-fluid border-dark rounded w-100 h-100vh'>
                 <div className='col-12 d-flex flex-column align-items-center' style={{ minHeight: '90vh' }}>
                     
-                        <div className='py-1'>
-                            <h3>{item.title}</h3>
+                        <div className='fs-2 text fw-light'>
+                            <p>{item.title}</p>
                         </div>
                     
                     <div className='col-10 d-flex flex-column justify-content-center align-items-center bg-light shadow rounded-xl' style={{borderRadius: '2rem'}}>
@@ -38,10 +38,10 @@ export default function ItemDetail({ item, text }) {
                         </div>
                         <div>
                             <div >
-                                <h5 className="font-weight-bold">Precio: $ {formatNumber(item.price)}</h5>
+                                <p className="fs-5 text fw-light">Precio: $ {formatNumber(item.price)}</p>
                             </div>
                         </div>
-                        <div className='w-100 d-flex justify-content-center flex-column my-2'>
+                        <div className='w-100 d-flex justify-content-center flex-column fw-light my-2'>
                             <p>Stock: {item.stock}</p>
                             <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
                         </div>

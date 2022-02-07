@@ -41,7 +41,7 @@ function ButtonCounter({start, stock, item}) {
     }
 
     return (
-        <div className='p-1' style={{minHeight: '110px'}}>
+        <div className='p-1 fw-light' style={{minHeight: '110px'}}>
             <div  className={classAux}>
                 <div className='d-flex w-100'>
                     <button className={classTextAux} onClick={onAdd}><i className="fas fa-plus"></i></button>
