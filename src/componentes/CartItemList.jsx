@@ -14,7 +14,7 @@ function CartItemList({items}) {
                   <th scope="col">Item</th>
                   <th scope="col">Precio</th>
                   <th scope="col">Cantidad</th>
-                  <th scope="col">Subtotal</th>
+                 
                   <th scope="col">Eliminar</th>
                 </tr>
             </thead>
