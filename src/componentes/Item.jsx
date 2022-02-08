@@ -37,6 +37,7 @@ function Item({item, text}) {
             </div>
             <div className='text-dark'>
                 <ButtonCounter start={1} stock={item.stock} item={item}></ButtonCounter>
+                
             </div>
         </div>
         </div>
