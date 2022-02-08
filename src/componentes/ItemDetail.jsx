@@ -32,16 +32,16 @@ export default function ItemDetail({ item, text }) {
                         <img className='img-fluid border border border-muted shadow rounded m-2' onMouseEnter={()=>{setImg(item.picture3)}} style={{ maxSize: '30px' }} src={item.picture3} alt="" />
                     </div>
 
-                    <div className='col-12 col-sm-4 d-flex justify-content-center align-items-center flex-column py-2'>
+                    <div className='col-12 col-sm-8 d-flex justify-content-center align-items-center flex-column py-2'>
                         <div className='py-1'>
-                            <p className='text-secondary'><small>{item.descripcion}</small></p>
+                            <p className='text-secondary text-justify'><small className='text-justify'>{item.descripcion}</small></p>
                         </div>
                         <div>
                             <div >
                                 <p className="fs-5 text fw-light">Precio: $ {formatNumber(item.price)}</p>
                             </div>
                         </div>
-                        <div className='w-100 d-flex justify-content-center flex-column fw-light my-2'>
+                        <div className='col-10 col-sm-6 d-flex justify-content-center flex-column fw-light my-2'>
                             <p>Stock: {item.stock}</p>
                             <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
                         </div>

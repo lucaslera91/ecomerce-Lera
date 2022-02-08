@@ -13,7 +13,7 @@ if(items.length < 1){
 }else{
  
     return(
-        <div className="border-1 border border-muted m-3 my-4 p-3 shadow bg-light rounded-xl" style={{ borderRadius: '2rem'}}>
+        <div className="border-1 border border-muted m-3 my-4 p-3 shadow bg-white rounded-xl" style={{ borderRadius: '2rem'}}>
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -22,7 +22,7 @@ if(items.length < 1){
             </ol>
             <div className="carousel-inner">
               <div className="carousel-item active" >
-                <Link to={`/`}><img className="d-block w-100" style={{ backgroundColor: '', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '150px'}} src='https://edsi.al/wp-content/uploads/2020/05/New-Refurbished-Banner.jpg' alt="Third slide"/></Link>
+                <Link to={`/`}><img className="d-block w-100" style={{ backgroundColor: '', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '150px'}} src='https://thumbs.dreamstime.com/b/banner-de-etiqueta-bienvenida-la-cinta-texto-imagen-generada-por-el-equipo-fondo-blanco-aislado-175593848.jpg' alt="Third slide"/></Link>
               </div>
               <div className="carousel-item">
                 <Link to={`/detail/${items[0].id}`}><img className="d-block w-100" style={{ backgroundColor: '', borderRadius: '2rem', objectFit: 'contain', overflow:'hidden',height: '150px'}} src={items[7].picture} alt="First slide"/></Link>

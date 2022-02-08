@@ -13,7 +13,7 @@ function ButtonCounter({start, stock, item}) {
 
     const classAddMore = `${addMore} bg-light w-75 border border-primary rounded-xl text-primary my-1`
     const classAux = `${display} container-fluid d-flex justify-content-between flex-column w-100 p-0 my-1`
-    const classTextAux = `bg-transparent text-${'dark'} border-0 w-75 mx-auto`
+    const classTextAux = `bg-transparent fw-light text-${'dark'} border-0 w-75 mx-auto`
     const resultadoClass = `${resultado} bg-primary text-light w-75 mx-auto my-1 shadow rounded-xl`
 
     const {addCart} = CartConsumer();
@@ -41,12 +41,12 @@ function ButtonCounter({start, stock, item}) {
     }
 
     return (
-        <div className='p-1 fw-light' style={{minHeight: '110px'}}>
+        <div className='p-1' style={{minHeight: '110px'}}>
             <div  className={classAux}>
                 <div className='d-flex w-100'>
-                    <button className={classTextAux} onClick={onAdd}><i className="fas fa-plus"></i></button>
-                    <h3 className='text-dark'>{contador}</h3>
                     <button className={classTextAux} onClick={less}><i className="fas fa-minus"></i></button>
+                    <h3 className='text-dark fw-light'>{contador}</h3>
+                    <button className={classTextAux} onClick={onAdd}><i className="fas fa-plus"></i></button>
                 </div>
                 <div className='w-100 '>
                     <button onClick={() => handleAddToCart(item)} className="bg-light w-75 border border-primary rounded-xl text-primary p-0" style={{borderRadius: '2rem'}}>Add to Cart</button>

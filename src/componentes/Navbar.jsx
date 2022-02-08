@@ -22,7 +22,7 @@ const NavBar = () => {
                     </div>
 
                     <Link className='text-decoration-none col-2' style={{borderRadius: '2rem'}} to="/cart">
-                        <div className='bg-light mx-auto border border-primary rounded-xl text-primary p-0' style={{ borderRadius: '2rem'}}>Go!</div>
+                        <div className='col-10 col-sm-5 bg-light mx-auto border border-primary rounded-xl text-primary p-0' style={{ borderRadius: '2rem'}}>Go!</div>
                     </Link>
                     <div className="col-sm-1 p-1">
                         <NavLink  className={({ isActive }) => (isActive ? active : inactive)} to='/cart'>
