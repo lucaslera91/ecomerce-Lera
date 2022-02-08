@@ -18,7 +18,7 @@ export default function ItemDetail({ item, text }) {
                             <p>{item.title}</p>
                         </div>
                     
-                    <div className='col-10 d-flex flex-column justify-content-center align-items-center bg-light shadow rounded-xl' style={{borderRadius: '1rem', overflow:'hidden'}}>
+                    <div className='col-10 d-flex flex-column justify-content-center align-items-center bg-light shadow rounded-xl' style={{maxHeight: '370px', borderRadius: '1rem', overflow:'hidden'}}>
                         <div>
                             <img style={{maxHeight: '370px', objectFit: 'contain'}} className='img-fluid' src={bigImg} alt="" />
                         </div>
