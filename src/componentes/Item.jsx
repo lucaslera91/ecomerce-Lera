@@ -16,7 +16,7 @@ function Item({item, text}) {
     const [itemSize, setItemSize] = useState({minWidth: '300px', maxWidth: "400px"})
 
     return (
-        <div onMouseEnter={() => setItemSize({transform: 'scale(1.05)', transition: '0.2s'})} onMouseLeave={() => setItemSize({minWidth: '300px', maxWidth: "400px"})} className='col-4 m-4 text-dark' style={itemSize}>
+        <div onTouchStart={() => setItemSize({transform: 'scale(1.05)', transition: '0.2s'})} onTouchEnd={() => setItemSize({minWidth: '300px', maxWidth: "400px"})} className='col-4 m-4 text-dark' style={itemSize}>
             <div className="container-fluid w-100 border-bottom  border-muted p-1 bg-light shadow rounded-xl" style={{borderRadius: '2rem'}}>
             <div className='w-100 py-1'>
                 <p className='d-flex justify-content-center align-items-center text-dark fs-2 text fw-light' style={{height: 60}}>{item.title}</p>
