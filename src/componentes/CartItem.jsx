@@ -15,8 +15,8 @@ function CartItem({item, count, id}) {
               <th className='fw-normal' scope="col">{title}</th>
               <th className='fw-normal' scope="col">$ {formatNumber(price)}</th>
               <th className='fw-normal' scope="col">{item.cuantity}</th>
-              <th className='fw-normal' scope="col">$ {formatNumber(subtotal)}</th>
-              <th className='fw-normal' scope="col"><i onClick={()=>removeElement(id)} className="far fa-trash-alt fa-2x "></i></th>    
+              <th className='fw-normal' scope="">$ {formatNumber(subtotal)}</th>
+              <th className='fw-normal' scope="col"><i onClick={()=>removeElement(id)} className="far fa-trash-alt fa"></i></th>    
            </tr>
     )
 }
