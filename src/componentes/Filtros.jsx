@@ -48,9 +48,9 @@ function Filtros() {
 
     //className={({ isActive }) => (isActive ? active : inactive)}
 
-  return <div className='d-flex justify-content-center align-items-center wrap'>
+  return <div className='d-flex justify-content-center align-items-center flex-wrap'>
       {categoryFilter.map((element) => {
-         return <div onClick={()=> handleCategory(element)} className='mx-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem'}}>
+         return <div onClick={()=> handleCategory(element)} className='m-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem'}}>
                     {element}
                 </div>
       })}
