@@ -1,13 +1,12 @@
-import React from 'react'
-import { Link} from "react-router-dom";
-import { useState } from 'react/cjs/react.development';
+import React, {useState} from 'react'
+import { Link } from "react-router-dom";
 import {formatNumber} from "../helper"
 import ButtonCounter from './ButtonCounter';
 import ItemListContainer from './ItemListContainer';
 
 function Item({item, text}) {
    
-    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    //var randomColor = Math.floor(Math.random()*16777215).toString(16);
     //const setBg = () => {
     //  const randomColor = Math.floor(Math.random()*16777215).toString(16);
     //  document.body.style.backgroundColor = "#" + randomColor;
