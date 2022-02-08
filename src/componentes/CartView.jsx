@@ -16,7 +16,7 @@ function CartView() {
     }else{
         return (
             <div className='d-flex justify-content-center'>
-                <div className='text-dark col-11 col-sm-8' style={{minHeight: '100vh'}}>
+                <div className='text-dark col-10 col-sm-8' style={{minHeight: '100vh'}}>
                     <h1>Checkout cart</h1>
                     <Resume items={cart}/>
                     <Link to='/checkout'><button className='bg-light rounded text-primary m-1'>Check out order</button></Link>
