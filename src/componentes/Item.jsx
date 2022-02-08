@@ -12,18 +12,17 @@ function Item({item, text}) {
     //  document.body.style.backgroundColor = "#" + randomColor;
     //  color.innerHTML = "#" + randomColor;
     //}
-
-    const [itemSize, setItemSize] = useState({minWidth: '300px', maxWidth: "400px"})
+//
 
     return (
-        <div onTouchStart={() => setItemSize({transform: 'scale(1.05)', transition: '0.2s'})} onTouchEnd={() => setItemSize({minWidth: '300px', maxWidth: "400px"})} className='col-4 m-4 text-dark' style={itemSize}>
+        <div className='col-4 m-4 text-dark' style={{minWidth: '300px', maxWidth: "400px"}}>
             <div className="container-fluid w-100 border-bottom  border-muted p-1 bg-light shadow rounded-xl" style={{borderRadius: '2rem'}}>
             <div className='w-100 py-1'>
                 <p className='d-flex justify-content-center align-items-center text-dark fs-2 text fw-light' style={{height: 60}}>{item.title}</p>
             </div>
             <div className='w-100 py-1'>
                 <Link to={`/detail/${item.id}`}>
-                    <img className="img-fluid img-thumbnail rounded border border-muted" style={{height: 200}} src={item.picture} alt=''/>
+                    <img  className="img-fluid img-thumbnail rounded border border-muted" style={{height:190}} src={item.picture} alt=''/>
                 </Link>
             </div>
             <div>
