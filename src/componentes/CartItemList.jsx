@@ -6,16 +6,26 @@ function CartItemList({items}) {
     const {removeElement} = CartConsumer();
     
     if(items.length > 0){
-        return items.map((element) => 
-                 <div key={element.id} className='d-flex justify-content-center align-items-center col-11'>
-                    <div className='d-flex justify-content-between col-md-9'>
-                        
-                        <CartItem item={element} count={items.indexOf(element)} key={element.id}></CartItem>
-                        <div className='d-flex justify-content-center align-items-center'>
-                            <i onClick={()=>removeElement( element.id)} className="far fa-trash-alt fa-2x "></i> 
-                        </div>
-                    </div>
-                 </div>);
+    return (
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Subtotal</th>
+                  <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+            {items.map((element) => 
+                        <CartItem item={element} count={items.indexOf(element)} id={element.id} key={element.id}></CartItem>
+                 )}
+            </tbody>
+        </table>
+           )
+        
     }else{
         return (
                 <div>
