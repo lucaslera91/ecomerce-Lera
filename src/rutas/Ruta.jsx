@@ -10,6 +10,8 @@ import ListProvider from '../context/ListProvider'
 import CheckOut from '../views/CheckOut'
 import Layout from '../rutas/Layout'
 import Inicio from '../views/Inicio'
+import Contact from '../views/Contact'
+import Mision from '../views/Mision'
 
 export default function Ruta() {
     return (
@@ -23,6 +25,8 @@ export default function Ruta() {
                                 <Route path='/cart' element={<Cart/>}/>
                                 <Route path='/checkout' element={<CheckOut/>}/>
                                 <Route path='/detail/:idElement' element={<Detail/>}/>
+                                <Route path='/proposito' element={<Mision/>}/>
+                                <Route path='/contactanos' element={<Contact/>}/>
                                 <Route path='/category/:idCategory' element={<Category/>}/>
                             </Route>
                             

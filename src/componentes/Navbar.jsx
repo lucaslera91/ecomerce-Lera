@@ -5,10 +5,10 @@ import { CartConsumer } from '../context/CartProvider'
 
 const NavBar = () => {
     const {cart} = CartConsumer();
-    console.log(cart)
+    //console.log(cart)
 
-    const active =   "d-flex justify-content-start col-8  text-decoration-none px-2 text-decoration-none text-light"
-    const inactive = "d-flex justify-content-start col-8  text-decoration-none px-2 text-decoration-none text-secondary"
+    const active = "d-flex justify-content-start col-8 text text-decoration-none px-2 text-decoration-none text-light"
+    const inactive = "d-flex justify-content-start col-8 text text-decoration-none px-2 text-decoration-none text-secondary"
 
     return (
                 <nav id="navBar" style={{top: 0, position: 'fixed', zIndex: 1}} className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden w-100">
@@ -43,10 +43,10 @@ const NavBar = () => {
                 
                 <ul className="nav navbar-nav">
                     <li>
-                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/category/laptop">Laptop</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/contactanos">Contactanos</NavLink>
                     </li>
                     <li>                        
-                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} to="/category/desktop">Desktop</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? active : inactive)} style={{height: '24px'}} to="/proposito">Cual es el proposito</NavLink>
                     </li>
                 </ul>
                 </div>

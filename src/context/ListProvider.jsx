@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useMemo } from 'react'
 import {collection, doc, getDocs, getDoc, addDoc, where, query} from 'firebase/firestore'
 import db from '../service'
+import { useEffect } from 'react/cjs/react.development';
 
 
 const ListContext = createContext();
@@ -14,17 +15,21 @@ function ListProvider({children}) {
     const [item, setItem] = useState({})
     const [category, setCategory] = useState([])
     const [purchaseId, setPurchaseId] = useState('')
+    const [display, setDisplay] = useState([])
+
 
     useMemo( () => {
             return getList()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [] )
 
+    
     function getList(){
         const itemRef = collection(db, 'items')
         getDocs(itemRef).then((snapshot)=>{
             const data = snapshot.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
             setList(data)
+            setDisplay(data)
          })
         }
         
@@ -51,8 +56,12 @@ function ListProvider({children}) {
             setPurchaseId(itemAdded.id)
         }
 
+        async function genericfilter(filter, type){
+            const aux = list.filter((element) => element.filter == type)
+        }
+
         return (
-            <ListContext.Provider value={{list, item, purchaseId, setList, getList, setItem, getDetailId, category, getCategory, addItem, setPurchaseId}}>
+            <ListContext.Provider value={{list, item, purchaseId, display, setDisplay, setList, getList, setItem, getDetailId, category, getCategory, addItem, setPurchaseId}}>
               {children}
             </ListContext.Provider>
         )

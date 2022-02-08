@@ -24,7 +24,7 @@ export default function Category() {
     return (
         <div>
             <div className="bg-transparent text-dark d-flex flex-column align-content-center justify-content-start" style={{minHeight:  '100vh'}}>
-            <h1 className='my-5'>{aux}</h1>
+            <p className='my-3 fs-2 text fw-normal'>{aux}</p>
                 <div className="bg-transparent d-flex align-content-center justify-content-center flex-wrap">
                     <ItemList items={category}></ItemList>
                 </div>
