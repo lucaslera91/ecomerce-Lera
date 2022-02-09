@@ -11,7 +11,7 @@ function ButtonCounter({start, stock, item}) {
     const [resultado, setDisplayResultado] = useState(`d-none`)
     const [addMore, setAddMore] = useState('d-none')
 
-    const classAddMore = `${addMore} bg-light w-75 border border-primary rounded-xl text-primary my-1`
+    const classAddMore = `${addMore} bg-light w-75 border mx-auto border-primary rounded-xl text-primary my-1`
     const classAux = `${display} container-fluid d-flex justify-content-between flex-column w-100 p-0 my-1`
     const classTextAux = `bg-transparent fw-light text-${'dark'} border-0 w-75 mx-auto`
     const resultadoClass = `${resultado} bg-primary text-light w-75 mx-auto my-1 shadow rounded-xl`
@@ -54,9 +54,11 @@ function ButtonCounter({start, stock, item}) {
             </div>
             <div><button onClick={handleAddMore} style={{borderRadius: '2rem'}}className={classAddMore}>Add more to cart</button></div>
             <div className={resultadoClass} style={{borderRadius: '2rem'}}>Product added to cart!</div>
-            <Link className='text-decoration-none' style={{borderRadius: '2rem'}} to="/cart">
-                    <div className='w-75 bg-light mx-auto border border-primary rounded-xl text-primary p-0' style={{ borderRadius: '2rem'}}>Go to cart</div>
+            <div className={classAddMore} style={{borderRadius: '2rem'}}>
+            <Link className='text-decoration-none'  to="/cart">
+                    Go to cart
             </Link>
+            </div>
         </div>);
       
 }
