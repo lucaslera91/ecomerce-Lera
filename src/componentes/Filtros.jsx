@@ -50,12 +50,12 @@ function Filtros() {
 
   return <div className='d-flex justify-content-center align-items-center flex-wrap'>
       {categoryFilter.map((element) => {
-         return <div onClick={()=> handleCategory(element)} className='m-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem'}}>
+         return <div onClick={()=> handleCategory(element)} className='m-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem', cursor: 'pointer'}}>
                     {element}
                 </div>
       })}
       {orderBy.map((element) => {
-         return <div onClick={()=> handleOrder(element.tipo)} className='mx-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem', whiteSpace: 'nowrap'}}>
+         return <div onClick={()=> handleOrder(element.tipo)} className='mx-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem', cursor: 'pointer', whiteSpace: 'nowrap'}}>
                     {element.titulo}
                 </div>
       })}
