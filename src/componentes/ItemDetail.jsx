@@ -13,16 +13,13 @@ export default function ItemDetail({ item, text }) {
         <div className='w-100  d-flex justify-content-center text-dark' >
             <div className='container-fluid border-dark rounded w-100 h-100vh'>
                 <div className='col-12 d-flex flex-column align-items-center' style={{ minHeight: '90vh' }}>
-                    
                         <div className='fs-2 text fw-normal'>
                             <p>{item.title}</p>
                         </div>
-                    
                     <div className='col-10 d-flex flex-column justify-content-center align-items-center bg-light shadow rounded-xl' style={{maxHeight: '370px', borderRadius: '1rem', overflow:'hidden'}}>
                         <div>
                             <img style={{maxHeight: '370px', objectFit: 'contain'}} className='img-fluid' src={bigImg} alt="" />
                         </div>
-                        
                     </div>
 
                     <div className='d-flex justify-content-center my-3' style={{maxWidth: "80px", maxHeight: "80px"}}>
@@ -46,7 +43,6 @@ export default function ItemDetail({ item, text }) {
                             <ItemCount text={text} stock={item.stock} start={1} item={item}></ItemCount>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

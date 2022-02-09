@@ -1,5 +1,4 @@
-import React , {useState} from 'react';
-import {NavLink, Link} from "react-router-dom";
+import React from 'react';
 import { ListConsumer } from '../context/ListProvider'
 
 
@@ -8,16 +7,14 @@ function Filtros() {
     const categoryFilter = ['Todo', 'Laptop', 'Desktop']
     const orderBy = [{titulo: 'Menor precio', tipo: 'sort'}, {titulo: 'Mayor precio', tipo: 'reverse'}]
 
-    //const [setList] = useState(list)
 
     function handleCategory(value){
-        
 
-        if(value == 'Todo'){
+        if(value === 'Todo'){
             setList(display)
             return
         }else{
-            const aux = display.filter(element => element.type == value.toLowerCase())
+            const aux = display.filter(element => element.type === value.toLowerCase())
             setList(aux)
         }
     }
@@ -34,19 +31,14 @@ function Filtros() {
                 setList([aux])
                 console.log(list)
                 break;
+            default: 
+                break;
+
         }
         setList([...list])
         console.log(list)
-        //setList(list)
-        //console.log(aux)
         console.log(list)
-        
     }
-
-    const active = 'mx-1 px-2 border border-muted bg-light shadow text-decoration-none text-dark'
-    const inactive = 'mx-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted'
-
-    //className={({ isActive }) => (isActive ? active : inactive)}
 
   return <div className='d-flex justify-content-center align-items-center flex-wrap'>
       {categoryFilter.map((element) => {

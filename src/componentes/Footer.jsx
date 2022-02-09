@@ -30,7 +30,8 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="footer-copyright text-center p-2 text-dark">© 2020 Copyright:
+          <div className="mx-auto col-10 footer-copyright text-center p-2 text-dark">© 2020 Copyright:
+            Simulacion de Pagina 
             MDBootstrap.com
           </div>
         </footer>

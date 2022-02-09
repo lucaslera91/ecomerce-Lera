@@ -5,7 +5,7 @@ import Carusell from './Carusell';
 import Filtros from "./Filtros";
 
 export default function ItemListContainer({greeting, Children, fn}) {
-    const {list, display, setList, getList} = ListConsumer();
+    const {list, getList} = ListConsumer();
 
     async function asignList(){
         await getList()

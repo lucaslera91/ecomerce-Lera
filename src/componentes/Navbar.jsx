@@ -5,8 +5,6 @@ import { CartConsumer } from '../context/CartProvider'
 
 const NavBar = () => {
     const {cart} = CartConsumer();
-    //console.log(cart)
-
     const active = "d-flex justify-content-start col-8 text text-decoration-none px-2 text-decoration-none text-light"
     const inactive = "d-flex justify-content-start col-8 text text-decoration-none px-2 text-decoration-none text-secondary"
 
@@ -18,7 +16,6 @@ const NavBar = () => {
                         <NavLink className={({ isActive }) => (isActive ? active : inactive)} to='/'>
                             <h3>CompuShop</h3>
                         </NavLink>
-                    
                     </div>
 
                     <Link className='text-decoration-none col-2' style={{borderRadius: '2rem'}} to="/cart">

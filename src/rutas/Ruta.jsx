@@ -9,7 +9,6 @@ import CartProvider from '../context/CartProvider'
 import ListProvider from '../context/ListProvider'
 import CheckOut from '../views/CheckOut'
 import Layout from '../rutas/Layout'
-import Inicio from '../views/Inicio'
 import Contact from '../views/Contact'
 import Mision from '../views/Mision'
 

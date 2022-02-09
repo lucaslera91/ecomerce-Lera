@@ -1,19 +1,9 @@
-import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import {formatNumber} from "../helper"
 import ButtonCounter from './ButtonCounter';
-import ItemListContainer from './ItemListContainer';
 
 function Item({item, text}) {
    
-    //var randomColor = Math.floor(Math.random()*16777215).toString(16);
-    //const setBg = () => {
-    //  const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    //  document.body.style.backgroundColor = "#" + randomColor;
-    //  color.innerHTML = "#" + randomColor;
-    //}
-//
-
     return (
         <div className='col-4 m-4 text-dark' style={{minWidth: '300px', maxWidth: "400px"}}>
             <div className="container-fluid w-100 border-bottom  border-muted p-1 bg-light shadow rounded-xl" style={{borderRadius: '1rem'}}>

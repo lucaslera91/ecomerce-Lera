@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 import Resume from './Resume'
 import { CartConsumer } from '../context/CartProvider'
 import { ListConsumer } from '../context/ListProvider'
-import {checkIfEmpty,phonenumber, check, validateEmail} from '../helper'
+import {phonenumber, validateEmail} from '../helper'
 import Swal from 'sweetalert2'
-import InputStatus from './InputStatus'
 
 
 function ConfirmationForm() {
@@ -21,27 +20,17 @@ function ConfirmationForm() {
          date: Date().toString(),
          total: total
     })
-    const [formInput, setFormInput] = useState({
+    const [formInput] = useState({
      
         nameError: 'Nombre no puede estar vacio',
         phoneError: 'Colocar numero correcto',
         emailError: 'Colocar correo valido'
     })
 
-    const validate = () => {
-        
-       
-        return true  
-    }
-
-
-   
-    //const [validationEmail, setValidationEmail] = useState('form-control')
     async function submitHandle(event){
         event.preventDefault()
      
         console.log(form)
-        const {buyer: {email, phone}} = form
         
         if (form.buyer.name < 1 || form.buyer.phone.length < 10 || !validateEmail(form.buyer.email)){
             Swal.fire({
@@ -55,7 +44,7 @@ function ConfirmationForm() {
 
             Swal.fire({
                 icon: 'success',
-                title: 'Se realizo la compra exitosamente!',
+                title: 'Se simulo la compra exitosamente!',
                 showConfirmButton: false,
                 timer: 1500
             })

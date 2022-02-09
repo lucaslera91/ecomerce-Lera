@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, useMemo } from 'react'
 import {collection, doc, getDocs, getDoc, addDoc, where, query} from 'firebase/firestore'
 import db from '../service'
-import { useEffect } from 'react/cjs/react.development';
 
 
 const ListContext = createContext();
@@ -54,10 +53,6 @@ function ListProvider({children}) {
             const col = collection(db, 'orders')
             const itemAdded = await addDoc(col, data)
             setPurchaseId(itemAdded.id)
-        }
-
-        async function genericfilter(filter, type){
-            const aux = list.filter((element) => element.filter == type)
         }
 
         return (

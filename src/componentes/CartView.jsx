@@ -22,10 +22,7 @@ function CartView() {
                     <Link to='/checkout'><button className='bg-light rounded text-primary m-1'>Check out order</button></Link>
                     <span className='border-bottom'></span>
                     <button onClick={() => setCart([])} className='bg-light rounded text-danger m-1'>Empty Cart</button>
-                    
-                    
                     <CartItemList items={cart}></CartItemList>
-                    
                 </div>
             </div>
         )

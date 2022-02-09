@@ -1,5 +1,3 @@
-import Swal from 'sweetalert2'
-
 
 export function validationIncludes(value, validacion){
     return  validacion.some((vocales) => vocales.toLowerCase()=== value.toLowerCase())
@@ -24,7 +22,9 @@ export function formatNumber(number){
 
 export function validateEmail(email) 
 {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+ if (/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(email))
+// eslint-disable-next-line react-hooks/exhaustive-deps
+
   {
     //return ('form control is-valid')
     return true
