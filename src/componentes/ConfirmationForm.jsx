@@ -53,28 +53,16 @@ function ConfirmationForm() {
         }  
            
     }
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  
-    // Loop over them and prevent submission
-   
     function handleForm(e){
-
         const {name, value} = e.target
-        //alert(name)
         if(name === 'phone'){
-           
            if (phonenumber(value)){
             setForm({...form, buyer: {...form.buyer, [name]: value} } )
             console.log(form)
            }
         }else{
             setForm({...form, buyer: {...form.buyer, [name]: value} } )
-
         }
-        
-        console.log(form)
     }
 
     function handlePostOrder(){
@@ -89,8 +77,6 @@ function ConfirmationForm() {
         handlePostOrder()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [purchaseId])
-
-  
 
         return (
             <div className='d-flex flex-column align-items-center'>
@@ -117,7 +103,6 @@ function ConfirmationForm() {
                                         <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.phoneError}</div>)
                                     : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
 
-
                                     <input
                                         onChange={(e) => handleForm(e) }
                                         value={form.buyer.email}
@@ -127,9 +112,7 @@ function ConfirmationForm() {
                                         {!validateEmail(form.buyer.email) ? (
                                             <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.emailError}</div>)
                                         : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
-
                             </form>
-
                             <div className='col-sm-12 text-dark d-flex my-3 align-items-center justify-content-center'>
                                 <Resume items={cart}></Resume>
                             </div>
@@ -137,14 +120,15 @@ function ConfirmationForm() {
                     </div>
                     <div className='d-flex flex-column align-items-center my-1 w-100'>
                         <button className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2' onClick={(e) => submitHandle(e)}>Confirm Purchase</button>
-                        <Link className='col-6 col-sm-3 ' to="/"><button onClick={postSubmit} className='w-100 bg-light border border-primary rounded text-primary'>Home</button></Link>
+                        <Link className='col-6 col-sm-3 ' to="/">
+                            <button onClick={postSubmit} className='w-100 bg-light border border-primary rounded text-primary'>
+                                Home
+                            </button>
+                        </Link>
                     </div>
                     <h3 className='py-3 text-dark'>{orderResponse}</h3>
                 </div>
-                </div>)
+            </div>)
 
 }
-
-
-
             export default ConfirmationForm

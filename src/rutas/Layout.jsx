@@ -7,11 +7,9 @@ import FooterDisplay from '../views/FooterDisplay'
 function Layout() {
   return (
         <div>
-            
             <NavBar/>
             <Outlet/>
             <FooterDisplay/>
-
         </div>
         );
 }

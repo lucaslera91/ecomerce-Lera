@@ -28,7 +28,6 @@ export default function Ruta() {
                                 <Route path='/contactanos' element={<Contact/>}/>
                                 <Route path='/category/:idCategory' element={<Category/>}/>
                             </Route>
-                            
                             <Route path='*' element={<Error/>}/>
                         </Routes>
                     </ListProvider>

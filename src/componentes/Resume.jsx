@@ -3,6 +3,7 @@ import { CartConsumer } from '../context/CartProvider'
 import {formatNumber} from "../helper"
 
 function Resume({items}) {
+
     const {cart, total, setTotal} = CartConsumer();
 
     useEffect(()=>{
@@ -18,7 +19,7 @@ function Resume({items}) {
                 <h3>Total: $ {formatNumber(total)}</h3>
                 <h5>Items: {formatNumber(items.length)}</h5>
             </div>
-        )
+            )
     }
 }
 

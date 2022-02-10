@@ -28,12 +28,12 @@ function ButtonCounter({start, stock, item}) {
             setContador(contador - 1)
         }
     }
-    function handleAddMore(){
+    const handleAddMore = () => {
         setDisplay('visible')
          setDisplayResultado('d-none')
          setAddMore('d-none')
     }
-    function handleAddToCart(item){
+    const handleAddToCart = (item) => {
          setDisplay('d-none')
          setDisplayResultado('visible')
          addCart(item, contador)
@@ -42,23 +42,35 @@ function ButtonCounter({start, stock, item}) {
 
     return (
         <div className='p-1' style={{minHeight: '110px'}}>
-            <div  className={classAux}>
+            <div className={classAux}>
                 <div className='d-flex w-100'>
-                    <button className={classTextAux} onClick={less}><i className="fas fa-minus"></i></button>
+                    <button className={classTextAux} onClick={less}>
+                        <i className="fas fa-minus"></i>
+                    </button>
                     <h3 className='text-dark fw-light'>{contador}</h3>
-                    <button className={classTextAux} onClick={onAdd}><i className="fas fa-plus"></i></button>
+                    <button className={classTextAux} onClick={onAdd}>
+                        <i className="fas fa-plus"></i>
+                    </button>
                 </div>
                 <div className='w-100 '>
-                    <button onClick={() => handleAddToCart(item)} className="bg-light w-75 border border-primary rounded-xl text-primary p-0" style={{borderRadius: '2rem'}}>Add to Cart</button>
+                    <button onClick={() => handleAddToCart(item)} className="bg-light w-75 border border-primary rounded-xl text-primary p-0" style={{borderRadius: '2rem'}}>
+                        Add to Cart
+                    </button>
                 </div>
             </div>
-            <div><button onClick={handleAddMore} style={{borderRadius: '2rem'}}className={classAddMore}>Add more to cart</button></div>
-            <div className={resultadoClass} style={{borderRadius: '2rem'}}>Product added to cart!</div>
-            <div className={classAddMore} style={{borderRadius: '2rem'}}>
-            <Link className='text-decoration-none'  to="/cart">
-                    Go to cart
-            </Link>
+            <div>
+                <button onClick={handleAddMore} style={{borderRadius: '2rem'}}className={classAddMore}>
+                    Add more to cart
+                </button>
             </div>
+            <div className={resultadoClass} style={{borderRadius: '2rem'}}>
+                Product added to cart!
+            </div>
+            <Link className='text-decoration-none w-100 bg-danger'  to="/cart">
+                <div className={classAddMore} style={{borderRadius: '2rem'}}>
+                    Go to cart
+                </div>
+            </Link>
         </div>);
       
 }

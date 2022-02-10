@@ -8,12 +8,12 @@ function CartProvider({children}) {
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState('')
   
-    function removeElement(id){
+    const removeElement = (id) => {
         let newCart = cart.filter(element => element.id !== id)
         setCart(newCart)
     }
 
-    function addElementsInCart(cart, item, q){
+    const addElementsInCart = (cart, item, q) => {
         const index = cart.findIndex((cart) => cart.id === item.id)
         const aux = cart[index].cuantity 
         if ((aux + q) <= item.stock){
@@ -24,13 +24,10 @@ function CartProvider({children}) {
         }
     }
 
-    function addCart(item, q){
-        if(validateObj(cart, item, 'id')) {
-            addElementsInCart(cart, item, q)
-        }else{
-            item.cuantity = q
-            setCart([...cart, item])
-        }
+    const addCart = (item, q) => {
+
+        validateObj(cart, item, 'id') ? addElementsInCart(cart, item, q): item.cuantity = q; setCart([...cart, item])
+        
     }
    
     return (

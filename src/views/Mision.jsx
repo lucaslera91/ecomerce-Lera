@@ -2,10 +2,10 @@ import React from 'react';
 import PropositoDePag from '../componentes/PropositoDePag';
 
 function Mision() {
-  return <div>
+  return (
+    <div>
       <PropositoDePag></PropositoDePag>
-
-  </div>;
+    </div>);
 }
 
 export default Mision;

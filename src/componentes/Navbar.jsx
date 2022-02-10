@@ -4,13 +4,13 @@ import { CartConsumer } from '../context/CartProvider'
 
 
 const NavBar = () => {
+    
     const {cart} = CartConsumer();
     const active = "d-flex justify-content-start col-8 text text-decoration-none px-2 text-decoration-none text-light"
     const inactive = "d-flex justify-content-start col-8 text text-decoration-none px-2 text-decoration-none text-secondary"
 
     return (
-                <nav id="navBar" style={{top: 0, position: 'fixed', zIndex: 1}} className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden w-100">
-                
+            <nav id="navBar" style={{top: 0, position: 'fixed', zIndex: 1}} className="navbar navbar-dark navbar-1 bg-dark d-flex overflow-hidden w-100">
                 <div className="col-sm-10 px-3 d-flex align-items-center justify-content-start">
                     <div className="col-sm-9 px-3 d-flex align-items-center justify-content-start">
                         <NavLink className={({ isActive }) => (isActive ? active : inactive)} to='/'>
@@ -28,7 +28,6 @@ const NavBar = () => {
                     </div>
                 </div>
                  
-                
                 <div className="col-sm-1 ">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
                         aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +45,8 @@ const NavBar = () => {
                         <NavLink className={({ isActive }) => (isActive ? active : inactive)} style={{height: '24px'}} to="/proposito">Cual es el proposito</NavLink>
                     </li>
                 </ul>
-                </div>
-                </nav>
+            </div>
+        </nav>
     );
 }
 

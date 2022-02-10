@@ -7,9 +7,7 @@ function Filtros() {
     const categoryFilter = ['Todo', 'Laptop', 'Desktop']
     const orderBy = [{titulo: 'Menor precio', tipo: 'sort'}, {titulo: 'Mayor precio', tipo: 'reverse'}]
 
-
-    function handleCategory(value){
-
+    const handleCategory = (value) => {
         if(value === 'Todo'){
             setList(display)
             return
@@ -19,7 +17,7 @@ function Filtros() {
         }
     }
 
-    function handleOrder(filtro){
+    const handleOrder = (filtro) => {
         switch (filtro) {
             case 'sort':
                 list.sort((a, b) => {
@@ -33,7 +31,6 @@ function Filtros() {
                 break;
             default: 
                 break;
-
         }
         setList([...list])
         console.log(list)
@@ -41,11 +38,13 @@ function Filtros() {
     }
 
   return <div className='d-flex justify-content-center align-items-center flex-wrap'>
+
       {categoryFilter.map((element) => {
          return <div onClick={()=> handleCategory(element)} className='m-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem', cursor: 'pointer'}}>
                     {element}
                 </div>
       })}
+
       {orderBy.map((element) => {
          return <div onClick={()=> handleOrder(element.tipo)} className='mx-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem', cursor: 'pointer', whiteSpace: 'nowrap'}}>
                     {element.titulo}

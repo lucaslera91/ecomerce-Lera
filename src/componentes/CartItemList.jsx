@@ -15,7 +15,7 @@ function CartItemList({items}) {
                   <th scope="col">Eliminar</th>
                 </tr>
             </thead>
-            <tbody>
+        <tbody>
             {items.map((element) => 
                         <CartItem item={element} count={items.indexOf(element)} id={element.id} key={element.id}></CartItem>
             )}
@@ -25,10 +25,14 @@ function CartItemList({items}) {
         
     }else{
         return (
-                <div>
-                    <h3>Add your First Item!</h3>
-                    <a className='text-decoration-none text-dark' href="../"><button className='bg-light border-primary w-25 border rounded text-primary my-1'>Go to Home!</button></a>
-                </div>)
+            <div>
+                <h3>Add your First Item!</h3>
+                <a className='text-decoration-none text-dark' href="../">
+                    <button className='bg-light border-primary w-25 border rounded text-primary my-1'>
+                        Go to Home!
+                    </button>
+                </a>
+            </div>)
 }
 }
 export default CartItemList

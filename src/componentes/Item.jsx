@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {formatNumber} from "../helper"
 import ButtonCounter from './ButtonCounter';
 
-function Item({item, text}) {
+function Item({item}) {
    
     return (
         <div className='col-4 m-4 text-dark' style={{minWidth: '300px', maxWidth: "400px"}}>
@@ -20,14 +20,11 @@ function Item({item, text}) {
                 <button className="bg-light w-75 border border-muted my-1 rounded-lg text-dark fw-light" style={{borderRadius: '2rem'}} >Ver mas detalles!</button>
                 </Link>
             </div>
-            
-            
             <div className='text-dark fs-5 text fw-light'>
                Precio: $ {formatNumber(item.price)}
             </div>
             <div className='text-dark'>
                 <ButtonCounter start={1} stock={item.stock} item={item}></ButtonCounter>
-                
             </div>
         </div>
         </div>

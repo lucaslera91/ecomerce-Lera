@@ -16,14 +16,7 @@ function ListProvider({children}) {
     const [purchaseId, setPurchaseId] = useState('')
     const [display, setDisplay] = useState([])
 
-
-    useMemo( () => {
-            return getList()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [] )
-
-    
-    function getList(){
+    const getList = () => {
         const itemRef = collection(db, 'items')
         getDocs(itemRef).then((snapshot)=>{
             const data = snapshot.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
@@ -31,17 +24,22 @@ function ListProvider({children}) {
             setDisplay(data)
          })
         }
-        
-        function getDetailId(id){
-            const itemRef = doc(db, 'items', id)
-            getDoc(itemRef).then((snapshot)=>{
-                const data = {id:snapshot.id, ...snapshot.data()}
-                console.log(data)
-                setItem(data)
-             })
-        }
 
-        function getCategory(value){
+    useMemo( () => {
+            return getList()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [] )
+        
+    const getDetailId = (id) => {
+        const itemRef = doc(db, 'items', id)
+        getDoc(itemRef).then((snapshot)=>{
+            const data = {id:snapshot.id, ...snapshot.data()}
+            console.log(data)
+            setItem(data)
+         })
+    }
+
+    const getCategory = (value) =>{
             const itemRef = query(collection(db, 'items'), where('type', '==', value))
             getDocs(itemRef).then((snapshot)=>{
                 const data = snapshot.docs.map((doc) => doc = {id:doc.id, ...doc.data()})
@@ -49,11 +47,11 @@ function ListProvider({children}) {
              }) 
         }
 
-        async function addItem(data){
-            const col = collection(db, 'orders')
-            const itemAdded = await addDoc(col, data)
-            setPurchaseId(itemAdded.id)
-        }
+    async function addItem(data){
+        const col = collection(db, 'orders')
+        const itemAdded = await addDoc(col, data)
+        setPurchaseId(itemAdded.id)
+    }
 
         return (
             <ListContext.Provider value={{list, item, purchaseId, display, setDisplay, setList, getList, setItem, getDetailId, category, getCategory, addItem, setPurchaseId}}>
