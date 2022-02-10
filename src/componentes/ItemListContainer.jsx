@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import ItemList from './ItemList';
 import { ListConsumer } from '../context/ListProvider'
-import Carusell from './Carusell';
+import Carusell from './carusell/Carusell';
 import Filtros from "./Filtros";
 
 export default function ItemListContainer({ Children, fn}) {

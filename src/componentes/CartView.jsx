@@ -16,8 +16,10 @@ function CartView() {
     }else{
         return (
             <div className='d-flex justify-content-center'>
-                <div className='text-dark col-10 col-sm-8' style={{minHeight: '100vh'}}>
-                    <h1>Checkout cart</h1>
+                <div 
+                    className='text-dark col-10 col-sm-8' 
+                    style={{minHeight: '100vh'}}>
+                        <h1>Checkout cart</h1>
 
                     <Resume items={cart}/>
 
@@ -26,9 +28,13 @@ function CartView() {
                             Check out order
                         </button>
                     </Link>
+
                     <span className='border-bottom'></span>
-                    <button onClick={() => setCart([])} className='bg-light rounded text-danger m-1'>
-                        Empty Cart
+
+                    <button 
+                        onClick={() => setCart([])} 
+                        className='bg-light rounded text-danger m-1'>
+                            Empty Cart
                     </button>
                     <CartItemList items={cart}></CartItemList>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Outlet} from 'react-router-dom'
-import NavBar from '../componentes/Navbar';
+import NavBar from '../componentes/navbar/Navbar';
 import FooterDisplay from '../views/FooterDisplay'
 
 

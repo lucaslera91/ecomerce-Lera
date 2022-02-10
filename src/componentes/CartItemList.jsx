@@ -17,7 +17,12 @@ function CartItemList({items}) {
             </thead>
         <tbody>
             {items.map((element) => 
-                        <CartItem item={element} count={items.indexOf(element)} id={element.id} key={element.id}></CartItem>
+                        <CartItem
+                            item={element}
+                            count={items.indexOf(element)}
+                            id={element.id}
+                            key={element.id}>
+                        </CartItem>
             )}
             </tbody>
         </table>
@@ -27,9 +32,12 @@ function CartItemList({items}) {
         return (
             <div>
                 <h3>Add your First Item!</h3>
-                <a className='text-decoration-none text-dark' href="../">
-                    <button className='bg-light border-primary w-25 border rounded text-primary my-1'>
-                        Go to Home!
+                <a 
+                    className='text-decoration-none text-dark' 
+                    href="../">
+                    <button 
+                        className='bg-light border-primary w-25 border rounded text-primary my-1'>
+                            Go to Home!
                     </button>
                 </a>
             </div>)

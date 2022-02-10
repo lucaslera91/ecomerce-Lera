@@ -1,0 +1,6 @@
+.d-block .w-100{
+    border-radius: 2rem;
+    object-fit: contain;
+    overflow: 'hidden';
+    height: 150px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropositoDePag from '../componentes/PropositoDePag';
+import PropositoDePag from '../componentes/proposito/PropositoDePag';
 
 function Mision() {
   return (

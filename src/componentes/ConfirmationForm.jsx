@@ -91,8 +91,14 @@ function ConfirmationForm() {
                                         name='name' type="text" 
                                         placeholder='Name' />
                                         {!form.buyer.name ? (
-                                        <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.nameError}</div>)
-                                    : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
+                                            <div className='text-danger'>
+                                                <i class="far fa-times-circle"></i>
+                                                    {formInput.nameError}
+                                            </div>)
+                                            : (<div className='text-success'>
+                                                    <i class="fas fa-check"></i>
+                                                        Campo correcto
+                                                </div>)}
                                     <input
                                         onChange={(e) => handleForm(e) }
                                         value={form.buyer.phone}
@@ -100,8 +106,14 @@ function ConfirmationForm() {
                                         name='phone' type="text"
                                         placeholder='Phone'/>
                                         {form.buyer.phone.length < 10 ? (
-                                        <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.phoneError}</div>)
-                                    : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
+                                            <div className='text-danger'>
+                                                <i class="far fa-times-circle"></i>
+                                                    {formInput.phoneError}
+                                            </div>)
+                                            : (<div className='text-success'>
+                                                    <i class="fas fa-check"></i>
+                                                    Campo correcto
+                                                </div>)}
 
                                     <input
                                         onChange={(e) => handleForm(e) }
@@ -110,8 +122,14 @@ function ConfirmationForm() {
                                         name='email' type="email"
                                         placeholder='E-mail'/> 
                                         {!validateEmail(form.buyer.email) ? (
-                                            <div className='text-danger'><i class="far fa-times-circle"></i>{formInput.emailError}</div>)
-                                        : (<div className='text-success'><i class="fas fa-check"></i> Campo correcto</div>)}
+                                            <div className='text-danger'>
+                                                <i class="far fa-times-circle"></i>
+                                                    {formInput.emailError}
+                                            </div>)
+                                            : (<div className='text-success'>
+                                                    <i class="fas fa-check"></i> 
+                                                    Campo correcto
+                                                </div>)}
                             </form>
                             <div className='col-sm-12 text-dark d-flex my-3 align-items-center justify-content-center'>
                                 <Resume items={cart}></Resume>
@@ -119,10 +137,15 @@ function ConfirmationForm() {
                         </div>
                     </div>
                     <div className='d-flex flex-column align-items-center my-1 w-100'>
-                        <button className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2' onClick={(e) => submitHandle(e)}>Confirm Purchase</button>
+                        <button 
+                            className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2'
+                            onClick={(e) => submitHandle(e)}>
+                                Confirm Purchase
+                        </button>
                         <Link className='col-6 col-sm-3 ' to="/">
-                            <button onClick={postSubmit} className='w-100 bg-light border border-primary rounded text-primary'>
-                                Home
+                            <button onClick={postSubmit}
+                                className='w-100 bg-light border border-primary rounded text-primary'>
+                                    Home
                             </button>
                         </Link>
                     </div>

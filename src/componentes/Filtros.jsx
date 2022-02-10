@@ -50,7 +50,7 @@ function Filtros() {
                     {element.titulo}
                 </div>
       })}
-  </div>;
+    </div>;
 }
 
 export default Filtros;
