@@ -66,7 +66,7 @@ function ButtonCounter({start, stock, item}) {
             <div className={resultadoClass} style={{borderRadius: '2rem'}}>
                 Product added to cart!
             </div>
-            <Link className='text-decoration-none w-100 bg-danger'  to="/cart">
+            <Link className='text-decoration-none w-100'  to="/cart">
                 <div className={classAddMore} style={{borderRadius: '2rem'}}>
                     Go to cart
                 </div>
