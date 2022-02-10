@@ -3,6 +3,7 @@ import ItemCount from './ItemCount'
 import {formatNumber} from '../helper'
 
 export default function ItemDetail({ item, text }) {
+    
     const [bigImg, setImg] = useState('')
     
     useEffect(() => {
