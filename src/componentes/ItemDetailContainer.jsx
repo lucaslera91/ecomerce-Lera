@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import ItemDetail from './ItemDetail'
+import ItemDetail from './itemDetails/ItemDetail'
 import { useParams } from "react-router-dom";
 import { ListConsumer } from '../context/ListProvider'
 

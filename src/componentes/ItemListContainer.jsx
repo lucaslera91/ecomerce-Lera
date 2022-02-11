@@ -30,11 +30,13 @@ export default function ItemListContainer({ Children, fn}) {
         <div>
             <Carusell items={list}></Carusell>
             <Filtros/>
-            <div className="bg-transparent text-dark d-flex flex-column align-content-center justify-content-start" style={{minHeight:  containerHeight}}>
-                <div className="bg-transparent d-flex align-content-start justify-content-center flex-wrap">
-                    {Children}
-                    <ItemList items={list} fn={fn}></ItemList>
-                </div>
+            <div 
+                className="bg-transparent text-dark d-flex flex-column align-content-center justify-content-start" 
+                style={{minHeight:  containerHeight}}>
+                    <div className="bg-transparent d-flex align-content-start justify-content-center flex-wrap">
+                        {Children}
+                        <ItemList items={list} fn={fn}></ItemList>
+                    </div>
             </div>
         </div>
     )

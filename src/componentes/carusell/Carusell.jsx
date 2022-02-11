@@ -13,8 +13,8 @@ function Carusell({items}) {
   
       return(
           <div 
-            className="border-1 border border-muted m-3 my-4 p-3 shadow bg-white rounded-xl" 
-            style={{ borderRadius: '1rem'}}>
+            className="border-1 border border-muted m-3 my-2 p-3 shadow bg-white rounded-xl" 
+            >
               <div 
                 id="carouselExampleIndicators" 
                 className="carousel slide" 

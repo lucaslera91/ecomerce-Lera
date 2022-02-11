@@ -1,6 +1,13 @@
-.d-block .w-100{
-    border-radius: 2rem;
+.d-block.w-100{
+    border-radius: 1rem;
     object-fit: contain;
-    overflow: 'hidden';
+    overflow: hidden;
     height: 150px;
+    
 }
+.border-1.border.border-muted.m-3.my-2.p-3.shadow.bg-white.rounded-xl{
+    
+    border-radius: 1rem;
+    background-color: red;
+
+}   
