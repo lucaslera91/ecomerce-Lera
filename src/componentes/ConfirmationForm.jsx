@@ -131,7 +131,7 @@ function ConfirmationForm() {
                                                     Campo correcto
                                                 </div>)}
                             </form>
-                            <div className='col-sm-12 text-dark d-flex my-3 align-items-center justify-content-center'>
+                            <div className='col-sm-12 text-dark d-flex mx-auto my-3 align-items-center justify-content-center'>
                                 <Resume items={cart}></Resume>
                             </div>
                         </div>
