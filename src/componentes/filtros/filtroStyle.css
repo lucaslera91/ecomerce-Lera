@@ -1,5 +1,6 @@
 .d-flex{
     justify-content: center;
+    flex-wrap: wrap;
 }
 .border.border-muted.shadow.rounded-xl.text-muted{
     display: flex;
