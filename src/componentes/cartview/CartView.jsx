@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import CartItemList from '../componentes/CartItemList'
-import { CartConsumer } from '../context/CartProvider'
-import Resume from './Resume';
+import CartItemList from '../CartItemList'
+import { CartConsumer } from '../../context/CartProvider'
+import Resume from '../Resume';
+import '../cartview/cartView.css'
 
 function CartView() {
 
@@ -11,20 +12,18 @@ function CartView() {
     if (cart.length < 1){
         return <div className='text-dark' style={{minHeight: '100vh'}}>
                 <h3>No items in cart. Make your first purchase</h3>
-                <Link to='/'><button className='bg-light rounded text-primary my-1'>Back to home</button></Link>
+                <Link to='/'><button className='bg-light rounded-xl border border-secondary text-primary'>Back to home</button></Link>
             </div>
     }else{
         return (
-            <div className='d-flex justify-content-center'>
-                <div 
-                    className='text-dark col-10 col-sm-8' 
-                    style={{minHeight: '100vh'}}>
+            <div className='firstDiv'>
+                <div className='text-dark col-10 col-sm-8'>
                         <h1>Checkout cart</h1>
 
                     <Resume items={cart}/>
 
                     <Link to='/checkout'>
-                        <button className='bg-light rounded text-primary m-1'>
+                        <button className='bg-light rounded-xl border border-secondary text-primary'>
                             Check out order
                         </button>
                     </Link>
@@ -33,7 +32,7 @@ function CartView() {
 
                     <button 
                         onClick={() => setCart([])} 
-                        className='bg-light rounded text-danger m-1'>
+                        className='bg-light rounded-xl border border-secondary text-danger'>
                             Empty Cart
                     </button>
                     <CartItemList items={cart}></CartItemList>

@@ -1,0 +1,18 @@
+.firstDiv{
+    display: flex;
+    justify-content: center;
+}
+.text-dark.col-10.col-sm-8{
+    min-height: 95vh;
+}
+button{
+border-radius: 50rem;
+}
+.bg-light.rounded-xl.border.border-secondary.text-danger{
+    border-radius: 50rem;
+    margin: 5px;
+}
+.bg-light.rounded-xl.border.border-secondary.text-primary{
+    border-radius: 50rem;
+    margin: 5px;
+}

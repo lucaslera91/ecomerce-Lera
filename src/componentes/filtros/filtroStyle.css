@@ -1,0 +1,18 @@
+.d-flex{
+    justify-content: center;
+}
+.border.border-muted.shadow.rounded-xl.text-muted{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    border-radius: 50rem;
+    cursor: pointer;
+    white-space: 'nowrap';
+    
+}
+.border.border-muted.shadow.rounded-xl.text-muted:active{
+background-color: rgb(182, 201, 212);
+    
+}

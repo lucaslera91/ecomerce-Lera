@@ -1,5 +1,6 @@
 import React from 'react';
-import { ListConsumer } from '../context/ListProvider'
+import { ListConsumer } from '../../context/ListProvider'
+import './filtroStyle.css'
 
 
 function Filtros() {
@@ -37,17 +38,21 @@ function Filtros() {
         console.log(list)
     }
 
-  return <div className='d-flex justify-content-center align-items-center flex-wrap'>
+  return <div className='d-flex'>
 
       {categoryFilter.map((element) => {
-         return <div onClick={()=> handleCategory(element)} className='m-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem', cursor: 'pointer'}}>
-                    {element}
+         return <div onClick={()=> handleCategory(element)} className='m-1 px-2'>
+                    <button className='border border-muted shadow rounded-xl text-muted'>
+                        {element}
+                    </button>
                 </div>
       })}
 
       {orderBy.map((element) => {
-         return <div onClick={()=> handleOrder(element.tipo)} className='mx-1 px-2 border border-muted bg-light shadow text-decoration-none text-muted' style={{borderRadius: '50rem', cursor: 'pointer', whiteSpace: 'nowrap'}}>
-                    {element.titulo}
+         return <div onClick={()=> handleOrder(element.tipo)} className='m-1 px-2'>
+                    <button className='border border-muted shadow rounded-xl text-muted'>
+                        {element.titulo}
+                    </button>
                 </div>
       })}
     </div>;
