@@ -26,7 +26,11 @@ function CartProvider({children}) {
 
     const addCart = (item, q) => {
 
-        validateObj(cart, item, 'id') ? addElementsInCart(cart, item, q): item.cuantity = q; setCart([...cart, item])
+        if(validateObj(cart, item, 'id')) {
+            addElementsInCart(cart, item, q)}
+        else{
+            item.cuantity = q; setCart([...cart, item])
+        }
         
     }
    
