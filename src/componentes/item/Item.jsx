@@ -26,7 +26,7 @@ function Item({item}) {
             <div>
                 <Link to={`/detail/${item.id}`}>
                 <button 
-                    className="bg-light border border-muted my-1 rounded-lg text-dark fw-light">
+                    className="my-1 rounded-lg text-dark fw-light">
                         Ver mas detalles!
                 </button>
                 </Link>

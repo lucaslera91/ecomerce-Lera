@@ -20,7 +20,11 @@
     border-radius: 0.5rem;
 
 }
-.bg-light.border.border-muted.my-1.rounded-lg.text-dark.fw-light{
+.my-1.rounded-lg.text-dark.fw-light{
     width: 75%;
     border-radius: 2rem;
+    border: 1px solid rgb(199, 198, 198);
+}
+.my-1.rounded-lg.text-dark.fw-light:active{
+    border: 1px solid rgb(38, 104, 247);
 }

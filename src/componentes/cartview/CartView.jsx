@@ -22,20 +22,23 @@ function CartView() {
 
                     <Resume items={cart}/>
 
+                    <div className='buttonsCart'>
                     <Link to='/checkout'>
                         <button className='bg-light rounded-xl border border-secondary text-primary'>
                             Check out order
                         </button>
                     </Link>
 
-                    <span className='border-bottom'></span>
-
                     <button 
                         onClick={() => setCart([])} 
                         className='bg-light rounded-xl border border-secondary text-danger'>
                             Empty Cart
                     </button>
-                    <CartItemList items={cart}></CartItemList>
+                    </div>
+   
+                    <div className='cartItemHelperStyle my-2'>
+                        <CartItemList items={cart}></CartItemList>
+                    </div>
                 </div>
             </div>
         )

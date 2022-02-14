@@ -11,7 +11,16 @@ function ButtonCounter({start, stock, item}) {
     const [resultado, setDisplayResultado] = useState(`d-none`)
     const [addMore, setAddMore] = useState('d-none')
 
-    const classAddMore = `${addMore} bg-light w-75 border mx-auto border-primary rounded-xl text-primary my-1`
+    const classAddMore = `${addMore} 
+                                bg-light
+                            w-75
+                            border
+                            mx-auto
+                            border-primary
+                            rounded-xl
+                            text-primary
+                            my-1`
+
     const classAux = `${display}
                         container-fluid   
                         d-flex 
@@ -25,7 +34,7 @@ function ButtonCounter({start, stock, item}) {
                          fw-light
                          text-dark 
                          border-0 
-                         w-75 
+                         w-25 
                          mx-auto`
 
     const resultadoClass = `${resultado} 

@@ -3,7 +3,7 @@ import Footer from '../componentes/Footer';
 
 function FooterDisplay() {
   return (
-     <div>
+     <div className='d-flex justify-content-center'>
         <Footer/>
       </div>);
 }

@@ -81,8 +81,8 @@ function ConfirmationForm() {
         return (
             <div className='d-flex flex-column align-items-center'>
                 <div className='w-100'>
-                    <div className='row p-0 m-0 w-100 justify-content-center'>
-                        <div className=' col-sm-5 col-11 text-dark d-flex flex-column p-0'>
+                    <div className='row p-0 m-0 w-100 d-flex flex-column justify-content-center'>
+                        <div className=' col-sm-5 col-11  text-dark p-0 mx-auto'>
                             <form className="d-flex flex-column">
                                     <input
                                         onChange={(e) => handleForm(e) }
@@ -131,20 +131,27 @@ function ConfirmationForm() {
                                                     Campo correcto
                                                 </div>)}
                             </form>
-                            <div className='col-sm-12 text-dark d-flex mx-auto my-3 align-items-center justify-content-center'>
-                                <Resume items={cart}></Resume>
-                            </div>
                         </div>
+                        
+                        
                     </div>
+                    
+                    <div className='my-4'>
+                        <Resume items={cart}></Resume>
+                    </div>
+
+                    
                     <div className='d-flex flex-column align-items-center my-1 w-100'>
                         <button 
-                            className='bg-light col-6 col-sm-3 border border-primary rounded text-primary m-2'
+                            className='bg-light col-6 col-sm-3 border border-primary rounded-xl text-primary m-2'
+                            style={{borderRadius: '2rem'}}
                             onClick={(e) => submitHandle(e)}>
                                 Confirm Purchase
                         </button>
                         <Link className='col-6 col-sm-3 ' to="/">
                             <button onClick={postSubmit}
-                                className='w-100 bg-light border border-primary rounded text-primary'>
+                                className='w-100 bg-light border border-primary rounded-xl text-primary'
+                                style={{borderRadius: '2rem'}}>
                                     Home
                             </button>
                         </Link>

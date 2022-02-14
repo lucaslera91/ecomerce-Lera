@@ -1,4 +1,4 @@
-nav{
+.navbar.navbar-dark.navbar-1.bg-dark{
     top: 0;
     position: fixed;
     z-index: 1
@@ -8,11 +8,14 @@ nav{
     overflow: hidden;
     width: 100%;
 }
-.col-sm-10{
+.col-10{
+    display: flex;
+    justify-content: space-between;
+}
+.col-10.px-3{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 3px 0 3px 0;
+    
     
 }
 .col-sm-9{
@@ -23,7 +26,6 @@ nav{
 }
 .col-2{
     text-decoration: none;
-    border-radius: 2rem;
 }
 .col-10.col-sm-5.bg-light.mx-auto.border.border-primary.rounded-xl.text-primary{
     padding: 0;
