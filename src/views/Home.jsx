@@ -8,7 +8,7 @@ export default function Home() {
       }, [])
     return (
         <div>
-            <div style={{height: '8vh'}}></div>
+            <div style={{height: '10vh'}}></div>
             <ItemListContainer text={'dark'} greeting={`Productos`}>
             </ItemListContainer>
         </div>

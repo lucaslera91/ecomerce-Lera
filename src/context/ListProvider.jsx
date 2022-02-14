@@ -15,6 +15,7 @@ function ListProvider({children}) {
     const [category, setCategory] = useState([])
     const [purchaseId, setPurchaseId] = useState('')
     const [display, setDisplay] = useState([])
+    const [courtainAux, setCourtainAux] = useState(true)
 
     const getList = () => {
         const itemRef = collection(db, 'items')
@@ -54,7 +55,7 @@ function ListProvider({children}) {
     }
 
         return (
-            <ListContext.Provider value={{list, item, purchaseId, display, setDisplay, setList, getList, setItem, getDetailId, category, getCategory, addItem, setPurchaseId}}>
+            <ListContext.Provider value={{list, courtainAux, setCourtainAux, item, purchaseId, display, setDisplay, setList, getList, setItem, getDetailId, category, getCategory, addItem, setPurchaseId}}>
               {children}
             </ListContext.Provider>
         )
