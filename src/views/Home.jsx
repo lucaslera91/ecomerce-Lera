@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import Courtain from '../componentes/courtain/Courtain';
 import ItemListContainer from '../componentes/ItemListContainer';
 
 

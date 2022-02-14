@@ -24,7 +24,7 @@ function CartView() {
 
                     <div className='buttonsCart'>
                     <Link to='/checkout'>
-                        <button className='bg-light rounded-xl border border-secondary text-primary'>
+                        <button className='rounded-xl border border-secondary text-primary'>
                             Check out order
                         </button>
                     </Link>
