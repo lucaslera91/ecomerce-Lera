@@ -7,7 +7,7 @@ export default function Cart() {
       }, [])
     return (
         <div>
-            <div style={{height: '9vh'}}></div>
+            <div style={{height: '8vh'}}></div>
            <CartView></CartView>
         </div>
         )

@@ -17,7 +17,7 @@ function CartView() {
     }else{
         return (
             <div className='firstDiv'>
-                <div className='text-dark col-10 col-sm-8'>
+                <div className='text-dark col-12 col-sm-8'>
                         <h1>Checkout cart</h1>
 
                     <Resume items={cart}/>
