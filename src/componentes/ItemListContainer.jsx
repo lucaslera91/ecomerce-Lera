@@ -3,6 +3,7 @@ import ItemList from './ItemList';
 import { ListConsumer } from '../context/ListProvider'
 import Carusell from './carusell/Carusell';
 import Filtros from "./filtros/Filtros";
+import Courtain from "./courtain/Courtain";
 
 export default function ItemListContainer({ Children, fn}) {
 
@@ -28,6 +29,9 @@ export default function ItemListContainer({ Children, fn}) {
 
     return (
         <div>
+            <div className="d-flex justify-content-center">
+            <Courtain></Courtain>
+            </div>
             <Carusell items={list}></Carusell>
             <Filtros/>
             <div 
