@@ -16,12 +16,12 @@ function Courtain() {
    }else{
     setClassAux(<></>)
    }
-   
+   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   setTimeout(() => {
     setClassAux(<></>)
   
-  }, 1200)
+  }, 1500)
 
   return (
     classAux
