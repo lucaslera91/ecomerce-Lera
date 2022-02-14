@@ -22,7 +22,7 @@ export default function ItemDetail({ item, text }) {
                     <div 
                         className='col-10 bg-light shadow rounded-xl'>
                         <div>
-                            <img className='img-fluid' src={bigImg} alt="" />
+                            <img className='img-fluid p-2' src={bigImg} alt="" />
                         </div>
                     </div>
 
