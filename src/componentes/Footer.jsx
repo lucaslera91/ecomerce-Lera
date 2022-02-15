@@ -12,7 +12,7 @@ function Footer() {
                   <i class="fa-brands fa-github"></i>
                   </a>
                   
-                  <a href="www.linkedin.com/in/lucas-lera-lls5" className="li-ic text-dark px-2">
+                  <a href="https://www.linkedin.com/in/lucas-lera-lls5" className="li-ic text-dark px-2">
                     <i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
                   </a>
                 </div>
